@@ -1,0 +1,6 @@
+{
+  "name": "SunGodNika // Bio",
+  "description": "High-end aesthetic bio-link page themed after Sun God Nika and Valorant Neon with live Discord presence, antigravity canvas, and audio player.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
