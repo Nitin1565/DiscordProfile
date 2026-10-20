@@ -229,6 +229,21 @@
       box-shadow: 0 0 14px rgba(168, 85, 247, 0.85), 0 0 24px rgba(192, 132, 252, 0.6);
     }
 
+    /* Transparent Volume Control Pill */
+    #volume-control-pill {
+      background: rgba(88, 28, 135, 0.02) !important;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(192, 132, 252, 0.3) !important;
+      transition: all 0.3s ease;
+    }
+
+    #volume-control-pill:hover {
+      background: rgba(88, 28, 135, 0.08) !important;
+      border-color: rgba(192, 132, 252, 0.6) !important;
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+    }
+
     /* 3D Flip Scene & Tilt Container */
     .flip-scene {
       perspective: 1400px;
@@ -590,8 +605,8 @@
 
   <!-- Top Action Bar (Background Video Audio & Volume Control) -->
   <header class="fixed top-3 right-3 sm:top-4 sm:right-4 z-40 flex items-center">
-    <div
-      class="flex items-center gap-2 sm:gap-2.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-void-card/90 border border-white/10 text-white/90 hover:border-purple-400/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.35)] transition-all backdrop-blur-xl group shadow-2xl">
+    <div id="volume-control-pill"
+      class="flex items-center gap-2 sm:gap-2.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-white/90 group shadow-lg">
       <!-- Voice / Mute Button -->
       <button id="btn-quick-mute" type="button" title="Toggle Mute (M)"
         class="hover:text-purple-300 transition-colors cursor-pointer flex items-center justify-center p-0.5">
@@ -610,7 +625,7 @@
 
       <!-- Video Volume Slider -->
       <input type="range" id="video-volume-slider" min="0" max="1" step="0.01" value="0.5"
-        class="w-14 sm:w-20 h-1 bg-white/15 rounded cursor-pointer accent-purple-400 transition-all"
+        class="w-14 sm:w-20 h-1 bg-transparent rounded cursor-pointer accent-purple-400 transition-all"
         title="Adjust Video Volume" />
 
       <!-- Volume Percentage -->
