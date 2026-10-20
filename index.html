@@ -167,7 +167,7 @@
       animation-play-state: paused;
     }
 
-    /* Custom range slider thumb */
+    /* Custom range slider thumb: transparent purple glass knob */
     input[type=range] {
       -webkit-appearance: none;
       appearance: none;
@@ -187,14 +187,46 @@
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      background: #00f2fe;
-      box-shadow: 0 0 10px #00f2fe, 0 0 20px rgba(0, 242, 254, 0.8);
+      background: rgba(168, 85, 247, 0.35);
+      border: 1.5px solid rgba(216, 180, 254, 0.85);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 0 10px rgba(168, 85, 247, 0.6), 0 0 18px rgba(147, 51, 234, 0.4);
       cursor: pointer;
-      transition: transform 0.15s ease;
+      transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
     }
 
     input[type=range]::-webkit-slider-thumb:hover {
       transform: scale(1.25);
+      background: rgba(168, 85, 247, 0.55);
+      border-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.85), 0 0 24px rgba(192, 132, 252, 0.6);
+    }
+
+    /* Firefox volume range thumb */
+    input[type=range]::-moz-range-track {
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    input[type=range]::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: rgba(168, 85, 247, 0.35);
+      border: 1.5px solid rgba(216, 180, 254, 0.85);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 10px rgba(168, 85, 247, 0.6), 0 0 18px rgba(147, 51, 234, 0.4);
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    input[type=range]::-moz-range-thumb:hover {
+      transform: scale(1.25);
+      background: rgba(168, 85, 247, 0.55);
+      border-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.85), 0 0 24px rgba(192, 132, 252, 0.6);
     }
 
     /* 3D Flip Scene & Tilt Container */
@@ -534,9 +566,11 @@
 
   <!-- Background Looping Video & Animated Backup Fallback -->
   <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-    <video id="bg-video" autoplay loop muted playsinline
+    <video id="bg-video" autoplay loop muted playsinline preload="auto"
       class="w-full h-full object-cover opacity-45 scale-105 filter brightness-75 contrast-125 transition-opacity duration-1000"
       poster="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1920&q=80">
+      <source src="/background.mp4" type="video/mp4" />
+      <source src="background.mp4" type="video/mp4" />
       <source src="https://assets.mixkit.co/videos/preview/mixkit-clouds-and-blue-sky-2408-large.mp4"
         type="video/mp4" />
     </video>
@@ -966,11 +1000,15 @@
 
 
 
-  <!-- FLOATING NEON TOAST NOTIFICATION -->
+  <!-- PROFESSIONAL FLOATING TOAST NOTIFICATION -->
   <div id="toast"
-    class="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 sm:gap-2.5 px-3 py-1.5 sm:px-4 sm:py-2.5 max-w-[90vw] sm:max-w-md rounded-full bg-void-card border border-purple-400/50 text-purple-200 text-[11px] sm:text-xs font-mono shadow-[0_0_20px_rgba(168,85,247,0.4)] backdrop-blur-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
-    <span class="text-purple-400 font-bold">⚡</span>
-    <span id="toast-message">Copied to clipboard!</span>
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#120d24]/95 border border-purple-400/40 text-purple-100 text-xs font-medium shadow-[0_10px_30px_rgba(0,0,0,0.6),0_0_25px_rgba(168,85,247,0.35)] backdrop-blur-2xl opacity-0 translate-y-3 pointer-events-none transition-all duration-300 ease-out">
+    <span id="toast-icon-wrap" class="w-4 h-4 rounded-full bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 flex-shrink-0">
+      <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </span>
+    <span id="toast-message" class="tracking-wide">ID Copied</span>
   </div>
 
   <!-- MAIN SELF-CONTAINED APPLICATION LOGIC -->
@@ -1036,18 +1074,66 @@
         return trimmed;
       }
 
-      // Profile view counter: base value is 0, increments on each page visit
+      // Profile view counter: initialized with cached global views, synced live
       let viewCount = 1;
       try {
-        const storedViews = localStorage.getItem('sungodnika_view_count');
-        let prev = storedViews !== null ? parseInt(storedViews, 10) : 0;
-        if (isNaN(prev) || prev >= 40000) {
-          prev = 0;
+        const cachedViews = localStorage.getItem('sungodnika_global_views') || localStorage.getItem('sungodnika_view_count');
+        if (cachedViews !== null) {
+          const parsed = parseInt(cachedViews, 10);
+          if (!isNaN(parsed) && parsed > 0) {
+            viewCount = parsed;
+          }
         }
-        viewCount = prev + 1;
-        localStorage.setItem('sungodnika_view_count', viewCount.toString());
       } catch (_) {
         viewCount = 1;
+      }
+
+      async function syncGlobalViewCount() {
+        const viewsEl = document.getElementById('view-counter-display');
+        function updateDisplay(num) {
+          if (!viewsEl || !num || isNaN(num)) return;
+          viewsEl.textContent = `${Number(num).toLocaleString()} ${Number(num) === 1 ? 'view' : 'views'}`;
+        }
+
+        const isNewSession = !sessionStorage.getItem('sungodnika_session_hit');
+        const primaryUrl = isNewSession
+          ? 'https://countapi.mileshilliard.com/api/v1/hit/sungodnika-discord-profile-visits'
+          : 'https://countapi.mileshilliard.com/api/v1/get/sungodnika-discord-profile-visits';
+
+        const fallbackUrl = isNewSession
+          ? 'https://abacus.jasoncameron.dev/hit/sungodnika-discord-profile/visits'
+          : 'https://abacus.jasoncameron.dev/get/sungodnika-discord-profile/visits';
+
+        async function fetchWithTimeout(url, timeoutMs = 4500) {
+          const controller = new AbortController();
+          const timer = setTimeout(() => controller.abort(), timeoutMs);
+          try {
+            const res = await fetch(url, { signal: controller.signal, cache: 'no-store' });
+            clearTimeout(timer);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return await res.json();
+          } catch (err) {
+            clearTimeout(timer);
+            throw err;
+          }
+        }
+
+        try {
+          let data = null;
+          try {
+            data = await fetchWithTimeout(primaryUrl, 4000);
+          } catch (_) {
+            data = await fetchWithTimeout(fallbackUrl, 4000);
+          }
+
+          if (data && typeof data.value === 'number' && data.value > 0) {
+            sessionStorage.setItem('sungodnika_session_hit', 'true');
+            localStorage.setItem('sungodnika_global_views', data.value.toString());
+            updateDisplay(data.value);
+          }
+        } catch (_) {
+          // If network / ad-blocker blocked external counter, keep cached count
+        }
       }
 
       function applyConfigToDOM() {
@@ -1088,8 +1174,16 @@
             if (!currentSrc || !currentSrc.includes(targetVideo)) {
               videoEl.src = targetVideo;
               videoEl.load();
-              videoEl.play().catch(() => { });
             }
+          }
+          // Ensure video is muted for guaranteed zero-click autoplay on load
+          videoEl.muted = true;
+          const playPromise = videoEl.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {
+              videoEl.muted = true;
+              videoEl.play().catch(() => { });
+            });
           }
         }
 
@@ -1120,19 +1214,20 @@
        * 2. TOAST NOTIFICATION HELPER
        * ----------------------------------------------------------- */
       let toastTimeout = null;
-      function showToast(msg) {
+      function showToast(msg = 'ID Copied') {
         const toast = document.getElementById('toast');
         const toastMsg = document.getElementById('toast-message');
+        if (!toast || !toastMsg) return;
         toastMsg.textContent = msg;
 
-        toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        toast.classList.remove('opacity-0', 'translate-y-3', 'pointer-events-none');
         toast.classList.add('opacity-100', 'translate-y-0');
 
         if (toastTimeout) clearTimeout(toastTimeout);
         toastTimeout = setTimeout(() => {
           toast.classList.remove('opacity-100', 'translate-y-0');
-          toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
-        }, 2400);
+          toast.classList.add('opacity-0', 'translate-y-3', 'pointer-events-none');
+        }, 2200);
       }
 
       /* -------------------------------------------------------------
@@ -1293,6 +1388,7 @@
        * 4. BACKGROUND VIDEO AUDIO & VOLUME ENGINE
        * ----------------------------------------------------------- */
       let isVideoMuted = false;
+      let hasInteracted = false;
 
       function applyVideoAudio() {
         const video = document.getElementById('bg-video');
@@ -1311,7 +1407,8 @@
           if (high) high.classList.add('hidden');
           if (mutedIcon) mutedIcon.classList.remove('hidden');
         } else {
-          video.muted = false;
+          // Keep muted=true until first user interaction to guarantee zero-click background video autoplay
+          video.muted = !hasInteracted;
           video.volume = currentVolume;
           if (volSlider) volSlider.value = currentVolume;
           if (volPercent) volPercent.textContent = `${Math.round(currentVolume * 100)}%`;
@@ -1324,6 +1421,7 @@
       if (volSlider) {
         volSlider.value = currentVolume;
         volSlider.addEventListener('input', (e) => {
+          hasInteracted = true;
           const val = parseFloat(e.target.value);
           currentVolume = val;
           isVideoMuted = (val === 0);
@@ -1336,6 +1434,7 @@
       if (quickMuteBtn) {
         quickMuteBtn.addEventListener('click', (e) => {
           e.stopPropagation();
+          hasInteracted = true;
           const video = document.getElementById('bg-video');
           if (!video) return;
 
@@ -1936,14 +2035,12 @@
       /* -------------------------------------------------------------
        * 7. VIDEO AUDIO GESTURE UNMUTER
        * ----------------------------------------------------------- */
-      let hasInteracted = false;
       function handleFirstGesture() {
         if (hasInteracted) return;
         hasInteracted = true;
+        applyVideoAudio();
         const video = document.getElementById('bg-video');
-        if (video && !isVideoMuted) {
-          video.muted = false;
-          video.volume = currentVolume;
+        if (video && video.paused) {
           video.play().catch(() => { });
         }
       }
@@ -1966,7 +2063,7 @@
 
       function copyIdWithFeedback(badgeId, textToCopy, label) {
         function finish() {
-          showToast(`Copied ${label}: ${textToCopy}! ⚡`);
+          showToast('ID Copied');
           const badge = document.getElementById(badgeId);
           if (badge) {
             const prevText = badge.textContent;
@@ -2003,7 +2100,7 @@
           document.body.removeChild(ta);
           callback();
         } catch (_) {
-          showToast(`${label}: ${text}`);
+          showToast('ID Copied');
         }
       }
 
@@ -2081,10 +2178,12 @@
           const textToCopy = '#0001';
           if (navigator.clipboard) {
             navigator.clipboard.writeText(textToCopy).then(() => {
-              showToast('Copied UID #0001 to clipboard!');
+              showToast('ID Copied');
+            }).catch(() => {
+              showToast('ID Copied');
             });
           } else {
-            showToast('Copied UID #0001');
+            showToast('ID Copied');
           }
         });
       }
@@ -2185,7 +2284,21 @@
        * ----------------------------------------------------------- */
       applyConfigToDOM();
       applyVideoAudio();
+      syncGlobalViewCount();
       connectLanyard();
+
+      // Guarantee immediate zero-click background video autoplay on page load
+      const initVideo = document.getElementById('bg-video');
+      if (initVideo) {
+        initVideo.muted = true;
+        const playProm = initVideo.play();
+        if (playProm !== undefined) {
+          playProm.catch(() => {
+            initVideo.muted = true;
+            initVideo.play().catch(() => { });
+          });
+        }
+      }
     })();
   </script>
 </body>
