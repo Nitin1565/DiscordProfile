@@ -20,6 +20,9 @@ window.SITE_CONFIG = {
   subtitle: "Joyboy // Fast As Lightning",
   bio: "as long as i live , i have infinite chances...",
   avatarUrl: "",
+  faviconUrl: "/favicon.png",
+  // Typewriter phrases shown in the browser window title
+  titlePhrases: ["SunGodNika", "Joyboy", "Fast As Lightning", "nika.nx8"],
 
   socials: {
     discord: "nika.nx8",

@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SunGodNika</title>
+  <!-- Devil Fruit as Page / Header Favicon (Enlarged by 20% to fill tab icon space) -->
+  <link id="site-favicon" rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cimage href='/favicon.png' x='-10' y='-10' width='120' height='120'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
   <meta name="description"
     content="High-end aesthetic bio-link page themed after Sun God Nika and Valorant Neon with live Discord presence, antigravity canvas, and audio player." />
   <meta property="og:title" content="SunGodNika // Bio" />
@@ -85,22 +89,31 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Custom scrollbar */
+    /* Custom scrollbar (Purple transparent glass theme) */
+    html, body {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(168, 85, 247, 0.35) transparent;
+    }
+
     ::-webkit-scrollbar {
-      width: 6px;
+      width: 7px;
     }
 
     ::-webkit-scrollbar-track {
-      background: rgba(6, 6, 12, 0.8);
+      background: transparent;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: rgba(0, 242, 254, 0.25);
+      background: rgba(168, 85, 247, 0.25);
       border-radius: 999px;
+      border: 1px solid rgba(192, 132, 252, 0.15);
+      backdrop-filter: blur(4px);
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: rgba(0, 242, 254, 0.6);
+      background: rgba(168, 85, 247, 0.55);
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+      border-color: rgba(192, 132, 252, 0.4);
     }
 
     /* Glassmorphism styling (Flipped 30% opacity translucent purple glass) */
@@ -235,13 +248,44 @@
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
       border: 1px solid rgba(192, 132, 252, 0.3) !important;
-      transition: all 0.3s ease;
+      transition: background 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                  border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    #volume-control-pill:hover {
+    #volume-control-pill:hover,
+    #volume-control-pill:focus-within,
+    #volume-control-pill.is-active {
       background: rgba(88, 28, 135, 0.08) !important;
       border-color: rgba(192, 132, 252, 0.6) !important;
       box-shadow: 0 0 20px rgba(168, 85, 247, 0.35);
+    }
+
+    /* Collapsible Right-to-Left Volume Drawer Animation (Smooth & Slower) */
+    .volume-slider-drawer {
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateX(20px);
+      transition: max-width 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                  opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                  margin 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    #volume-control-pill:hover .volume-slider-drawer,
+    #volume-control-pill:focus-within .volume-slider-drawer,
+    #volume-control-pill.is-active .volume-slider-drawer {
+      max-width: 170px;
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+      margin-right: 6px;
     }
 
     /* 3D Flip Scene & Tilt Container */
@@ -504,11 +548,11 @@
       inset: 0;
       background: linear-gradient(to bottom,
           transparent 0%,
-          rgba(168, 85, 247, 0.08) 25%,
-          rgba(192, 132, 252, 0.45) 48%,
+          rgba(147, 51, 234, 0.08) 20%,
+          rgba(168, 85, 247, 0.35) 45%,
           rgba(255, 255, 255, 0.95) 50%,
-          rgba(0, 242, 254, 0.55) 52%,
-          rgba(168, 85, 247, 0.15) 75%,
+          rgba(192, 132, 252, 0.65) 54%,
+          rgba(147, 51, 234, 0.20) 75%,
           transparent 100%);
       filter: blur(12px);
     }
@@ -521,14 +565,15 @@
       height: 2.5px;
       background: linear-gradient(90deg,
           transparent 0%,
-          rgba(168, 85, 247, 0.8) 15%,
+          rgba(168, 85, 247, 0.85) 15%,
           #ffffff 50%,
-          rgba(0, 242, 254, 0.85) 85%,
+          rgba(192, 132, 252, 0.9) 85%,
           transparent 100%);
       box-shadow:
-        0 0 16px #e9d5ff,
-        0 0 32px #a855f7,
-        0 0 52px #00f2fe;
+        0 0 16px #f3e8ff,
+        0 0 32px #c084fc,
+        0 0 52px #a855f7,
+        0 0 80px #7e22ce;
     }
 
     /* Custom Cursor (Purple Neon Theme) */
@@ -581,7 +626,7 @@
 
   <!-- Background Looping Video & Animated Backup Fallback -->
   <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-    <video id="bg-video" autoplay loop muted playsinline preload="auto"
+    <video id="bg-video" autoplay loop playsinline preload="auto"
       class="w-full h-full object-cover opacity-45 scale-105 filter brightness-75 contrast-125 transition-opacity duration-1000"
       poster="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1920&q=80">
       <source src="/background.mp4" type="video/mp4" />
@@ -604,13 +649,26 @@
   <canvas id="particle-canvas" class="fixed inset-0 z-[1] pointer-events-none"></canvas>
 
   <!-- Top Action Bar (Background Video Audio & Volume Control) -->
-  <header class="fixed top-3 right-3 sm:top-4 sm:right-4 z-40 flex items-center">
+  <header class="fixed top-3 right-3 sm:top-4 sm:right-4 z-40 flex items-center justify-end">
     <div id="volume-control-pill"
-      class="flex items-center gap-2 sm:gap-2.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-white/90 group shadow-lg">
+      class="flex items-center rounded-full text-white/90 group shadow-lg cursor-pointer px-2 py-1.5 sm:px-2.5 sm:py-2 transition-all duration-300">
+      
+      <!-- Collapsible Volume Slider Drawer (Appears from right to left on hover) -->
+      <div id="volume-slider-drawer" class="volume-slider-drawer">
+        <!-- Volume Percentage -->
+        <span id="video-volume-percent"
+          class="font-mono text-[10px] sm:text-[11px] text-purple-200 w-6 sm:w-7 text-right select-none pl-1">50%</span>
+
+        <!-- Video Volume Slider -->
+        <input type="range" id="video-volume-slider" min="0" max="1" step="0.01" value="0.5"
+          class="w-14 sm:w-20 h-1 bg-transparent rounded cursor-pointer accent-purple-400 transition-all"
+          title="Adjust Video Volume" />
+      </div>
+
       <!-- Voice / Mute Button -->
       <button id="btn-quick-mute" type="button" title="Toggle Mute (M)"
-        class="hover:text-purple-300 transition-colors cursor-pointer flex items-center justify-center p-0.5">
-        <svg id="icon-vol-high" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        class="hover:text-purple-300 transition-colors cursor-pointer flex items-center justify-center p-0.5 flex-shrink-0">
+        <svg id="icon-vol-high" class="w-4 h-4 sm:w-5 sm:h-5 text-purple-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z" />
         </svg>
@@ -622,15 +680,6 @@
             d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
         </svg>
       </button>
-
-      <!-- Video Volume Slider -->
-      <input type="range" id="video-volume-slider" min="0" max="1" step="0.01" value="0.5"
-        class="w-14 sm:w-20 h-1 bg-transparent rounded cursor-pointer accent-purple-400 transition-all"
-        title="Adjust Video Volume" />
-
-      <!-- Volume Percentage -->
-      <span id="video-volume-percent"
-        class="font-mono text-[10px] sm:text-[11px] text-purple-200 w-6 sm:w-7 text-right select-none">50%</span>
     </div>
   </header>
 
@@ -678,14 +727,14 @@
             <!-- Bottom Interactive Prompt -->
             <div class="relative z-10 flex flex-col items-center text-center gap-2 pt-16">
               <div
-                class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-black/80 border border-purple-400/60 backdrop-blur-xl shadow-[0_0_30px_rgba(168,85,247,0.5)] flex items-center gap-2 group-hover:border-cyan-400 group-hover:shadow-[0_0_30px_rgba(0,242,254,0.5)] transition-all">
+                class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-black/80 border border-purple-400/60 backdrop-blur-xl shadow-[0_0_30px_rgba(168,85,247,0.5)] flex items-center gap-2 group-hover:border-purple-300 group-hover:shadow-[0_0_35px_rgba(168,85,247,0.7),0_0_20px_rgba(192,132,252,0.5)] transition-all">
                 <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-300 animate-spin-slow" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
                 <span
-                  class="font-syne font-bold text-[11px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest text-white uppercase glow-text-cyan">
+                  class="font-syne font-bold text-[11px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest text-white uppercase glow-text-purple group-hover:text-purple-100 transition-colors">
                   [ CLICK TO REVEAL PROFILE ]
                 </span>
               </div>
@@ -1047,9 +1096,70 @@
         subtitle: 'Joyboy // Fast As Lightning',
         bio: 'Radiant duelist laughing into the void. Surging through the frontline with electric overdrive. Drums of liberation beating at 180 BPM. ⚡🥁',
         avatarUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80',
+        faviconUrl: '/favicon.png',
         discordId: '717682700785549393',
         discordTag: 'nika.nx8',
+        titlePhrases: ['SunGodNika', 'Joyboy', 'Fast As Lightning', 'nika.nx8'],
       };
+
+      // Updates the browser tab header favicon, automatically enlarged by 20%
+      function updatePageFavicon(url, scale = 1.20) {
+        if (!url) return;
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = () => {
+          try {
+            const canvas = document.createElement('canvas');
+            const size = 64;
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+
+            // Draw enlarged and centered (1.20 = 20% larger)
+            const w = size * scale;
+            const h = size * scale;
+            const offset = (size - w) / 2;
+            ctx.drawImage(img, offset, offset, w, h);
+
+            const scaledUrl = canvas.toDataURL('image/png');
+            let favicon = document.getElementById('site-favicon');
+            if (!favicon) {
+              favicon = document.createElement('link');
+              favicon.id = 'site-favicon';
+              favicon.rel = 'icon';
+              document.head.appendChild(favicon);
+            }
+            favicon.type = 'image/png';
+            favicon.href = scaledUrl;
+            return;
+          } catch (_) { }
+
+          let favicon = document.getElementById('site-favicon');
+          if (favicon) favicon.href = url;
+        };
+        img.src = url;
+      }
+
+      // Smooth typewriter effect for the profile heading on the webpage
+      function typeProfileName(targetText) {
+        const nameEl = document.getElementById('profile-name');
+        if (!nameEl) return;
+        const text = targetText || config.displayName || 'SunGodNika';
+        nameEl.textContent = '';
+        let i = 0;
+        function typeChar() {
+          if (i <= text.length) {
+            nameEl.textContent = text.substring(0, i);
+            i++;
+            if (i <= text.length) {
+              setTimeout(typeChar, 75);
+            }
+          }
+        }
+        typeChar();
+      }
 
       // Merge site config from config.js (window.SITE_CONFIG) if available
       const config = Object.assign({}, DEFAULT_CONFIG, window.SITE_CONFIG || {});
@@ -1165,7 +1275,12 @@
         if (bioEl) bioEl.textContent = config.bio;
 
         const avatarEl = document.getElementById('profile-avatar');
-        if (avatarEl && config.avatarUrl) avatarEl.src = config.avatarUrl;
+        if (avatarEl && config.avatarUrl) {
+          avatarEl.src = config.avatarUrl;
+        }
+        if (config.faviconUrl) {
+          updatePageFavicon(config.faviconUrl);
+        }
 
         const trackTitleEl = document.getElementById('track-title');
         if (trackTitleEl) trackTitleEl.textContent = config.trackTitle;
@@ -1190,15 +1305,6 @@
               videoEl.src = targetVideo;
               videoEl.load();
             }
-          }
-          // Ensure video is muted for guaranteed zero-click autoplay on load
-          videoEl.muted = true;
-          const playPromise = videoEl.play();
-          if (playPromise !== undefined) {
-            playPromise.catch(() => {
-              videoEl.muted = true;
-              videoEl.play().catch(() => { });
-            });
           }
         }
 
@@ -1422,8 +1528,7 @@
           if (high) high.classList.add('hidden');
           if (mutedIcon) mutedIcon.classList.remove('hidden');
         } else {
-          // Keep muted=true until first user interaction to guarantee zero-click background video autoplay
-          video.muted = !hasInteracted;
+          video.muted = false;
           video.volume = currentVolume;
           if (volSlider) volSlider.value = currentVolume;
           if (volPercent) volPercent.textContent = `${Math.round(currentVolume * 100)}%`;
@@ -1443,6 +1548,15 @@
           localStorage.setItem('sungodnika_video_vol', currentVolume.toString());
           applyVideoAudio();
         });
+
+        // Keep volume pill open while actively dragging the slider
+        const pillEl = document.getElementById('volume-control-pill');
+        if (pillEl) {
+          volSlider.addEventListener('mousedown', () => pillEl.classList.add('is-active'));
+          volSlider.addEventListener('touchstart', () => pillEl.classList.add('is-active'), { passive: true });
+          window.addEventListener('mouseup', () => pillEl.classList.remove('is-active'));
+          window.addEventListener('touchend', () => pillEl.classList.remove('is-active'), { passive: true });
+        }
       }
 
       const quickMuteBtn = document.getElementById('btn-quick-mute');
@@ -1723,6 +1837,7 @@
             profileAvatar.src = discordAvatarUrl;
           }
         }
+
 
         // 4. Live Discord Avatar Decoration
         const decorAsset = user.avatar_decoration_data?.asset || user.avatar_decoration;
@@ -2048,20 +2163,65 @@
       }
 
       /* -------------------------------------------------------------
-       * 7. VIDEO AUDIO GESTURE UNMUTER
+       * 7. VIDEO AUDIO AUTOPLAY & CAPTURE UNMUTER
        * ----------------------------------------------------------- */
-      function handleFirstGesture() {
+      function unlockAudioEverywhere() {
         if (hasInteracted) return;
         hasInteracted = true;
-        applyVideoAudio();
+        isVideoMuted = false;
         const video = document.getElementById('bg-video');
-        if (video && video.paused) {
-          video.play().catch(() => { });
+        if (video) {
+          video.muted = false;
+          video.volume = currentVolume;
+          if (video.paused) {
+            video.play().catch(() => { });
+          }
+        }
+        applyVideoAudio();
+      }
+
+      function setupAudioUnlockers() {
+        const gestureEvents = ['pointerdown', 'mousedown', 'touchstart', 'keydown', 'wheel', 'click'];
+        function onGesture() {
+          unlockAudioEverywhere();
+          gestureEvents.forEach(evt => {
+            window.removeEventListener(evt, onGesture, { capture: true });
+          });
+        }
+        gestureEvents.forEach(evt => {
+          window.addEventListener(evt, onGesture, { capture: true, passive: true });
+        });
+      }
+
+      async function attemptAutoplayWithAudio() {
+        const video = document.getElementById('bg-video');
+        if (!video) return;
+
+        video.volume = currentVolume;
+        video.muted = false;
+
+        try {
+          const playProm = video.play();
+          if (playProm !== undefined) {
+            await playProm;
+            // Native unmuted autoplay succeeded on page load!
+            hasInteracted = true;
+            isVideoMuted = false;
+            applyVideoAudio();
+            return;
+          }
+        } catch (_) {
+          // Browser autoplay policy rejected unmuted audio on load.
+          // Fall back to playing muted video so visual background continues seamlessly:
+          video.muted = true;
+          try {
+            await video.play();
+          } catch (e) { }
+
+          // Arm capture-phase unlockers across the entire window
+          setupAudioUnlockers();
         }
       }
-      window.addEventListener('click', handleFirstGesture, { passive: true });
-      window.addEventListener('touchstart', handleFirstGesture, { passive: true });
-      window.addEventListener('keydown', handleFirstGesture, { passive: true });
 
       /* -------------------------------------------------------------
        * 8. CONNECTED PROFILES & FLOATING CLICK ACTIONS
@@ -2212,8 +2372,10 @@
       const btnFlipBack = document.getElementById('btn-flip-back');
 
       function flipToProfile() {
+        unlockAudioEverywhere();
         if (flipScene && !flipScene.classList.contains('is-flipped')) {
           flipScene.classList.add('is-flipped');
+          typeProfileName(config.displayName);
         }
       }
 
@@ -2245,16 +2407,17 @@
           tiltWrapper.style.transform = 'rotateX(0deg) rotateY(0deg)';
         });
 
-        // Click on front face directly flips to profile
+        // Click on front face directly flips to profile & unlocks audio
         if (cardFront) {
-          cardFront.addEventListener('click', (e) => {
-            e.stopPropagation();
+          cardFront.addEventListener('click', () => {
+            unlockAudioEverywhere();
             flipToProfile();
           });
         }
 
-        // Click anywhere on flipScene when not flipped triggers flip to profile
-        flipScene.addEventListener('click', (e) => {
+        // Click anywhere on flipScene when not flipped triggers flip to profile & unlocks audio
+        flipScene.addEventListener('click', () => {
+          unlockAudioEverywhere();
           if (!flipScene.classList.contains('is-flipped')) {
             flipToProfile();
           }
@@ -2295,25 +2458,61 @@
       });
 
       /* -------------------------------------------------------------
-       * 11. INITIALIZATION
+       * 11. BROWSER WINDOW TITLE TYPEWRITER ENGINE
+       * ----------------------------------------------------------- */
+      function initTitleTypewriter() {
+        const phrases = (config.titlePhrases && Array.isArray(config.titlePhrases) && config.titlePhrases.length > 0)
+          ? config.titlePhrases
+          : [
+            config.displayName || 'SunGodNika',
+            'Joyboy',
+            'Fast As Lightning',
+            config.discordTag || 'nika.nx8'
+          ];
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function tick() {
+          const currentPhrase = phrases[phraseIndex] || 'SunGodNika';
+
+          if (isDeleting) {
+            charIndex--;
+          } else {
+            charIndex++;
+          }
+
+          const currentText = currentPhrase.substring(0, charIndex);
+          document.title = currentText.length > 0 ? `${currentText} |` : '|';
+
+          let delay = isDeleting ? 65 : 125;
+
+          if (!isDeleting && charIndex === currentPhrase.length) {
+            document.title = currentPhrase;
+            delay = 2000;
+            isDeleting = true;
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            delay = 450;
+          }
+
+          setTimeout(tick, delay);
+        }
+
+        setTimeout(tick, 500);
+      }
+
+      /* -------------------------------------------------------------
+       * 12. INITIALIZATION
        * ----------------------------------------------------------- */
       applyConfigToDOM();
       applyVideoAudio();
       syncGlobalViewCount();
       connectLanyard();
-
-      // Guarantee immediate zero-click background video autoplay on page load
-      const initVideo = document.getElementById('bg-video');
-      if (initVideo) {
-        initVideo.muted = true;
-        const playProm = initVideo.play();
-        if (playProm !== undefined) {
-          playProm.catch(() => {
-            initVideo.muted = true;
-            initVideo.play().catch(() => { });
-          });
-        }
-      }
+      initTitleTypewriter();
+      attemptAutoplayWithAudio();
     })();
   </script>
 </body>
