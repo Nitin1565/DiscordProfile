@@ -1,1714 +1,1750 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SunGodNika // Bio</title>
-    <meta name="description" content="High-end aesthetic bio-link page themed after Sun God Nika and Valorant Neon with live Discord presence, antigravity canvas, and audio player." />
-    <meta property="og:title" content="SunGodNika // Bio" />
-    <meta property="og:description" content="High-end aesthetic bio-link page themed after Sun God Nika and Valorant Neon with live Discord presence, antigravity canvas, and audio player." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Google Fonts: Syne, Outfit, JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SunGodNika</title>
+  <meta name="description"
+    content="High-end aesthetic bio-link page themed after Sun God Nika and Valorant Neon with live Discord presence, antigravity canvas, and audio player." />
+  <meta property="og:title" content="SunGodNika // Bio" />
+  <meta property="og:description"
+    content="High-end aesthetic bio-link page themed after Sun God Nika and Valorant Neon with live Discord presence, antigravity canvas, and audio player." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Tailwind CSS CDN -->
-    <script src="/config.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              void: '#06060c',
-              'void-card': 'rgba(13, 13, 22, 0.72)',
-              'void-sub': 'rgba(255, 255, 255, 0.035)',
-              'solar-gold': '#fbbf24',
-              'solar-amber': '#f59e0b',
-              'electric-cyan': '#00f2fe',
-              'electric-blue': '#4facfe',
-              'divine-white': '#f8fafc',
+  <!-- Google Fonts: Syne, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="/config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: '#06060c',
+            'void-card': 'rgba(13, 13, 22, 0.72)',
+            'void-sub': 'rgba(255, 255, 255, 0.035)',
+            'solar-gold': '#fbbf24',
+            'solar-amber': '#f59e0b',
+            'electric-cyan': '#00f2fe',
+            'electric-blue': '#4facfe',
+            'divine-white': '#f8fafc',
+          },
+          fontFamily: {
+            syne: ['Syne', 'sans-serif'],
+            outfit: ['Outfit', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          animation: {
+            'spin-slow': 'spin 12s linear infinite',
+            'pulse-glow': 'pulseGlow 2.5s ease-in-out infinite',
+            'spark-float': 'sparkFloat 3s ease-in-out infinite',
+            'border-glow': 'borderGlow 4s linear infinite',
+          },
+          keyframes: {
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+              '50%': { opacity: '0.8', transform: 'scale(1.04)' },
             },
-            fontFamily: {
-              syne: ['Syne', 'sans-serif'],
-              outfit: ['Outfit', 'sans-serif'],
-              mono: ['"JetBrains Mono"', 'monospace'],
+            sparkFloat: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-6px) rotate(4deg)' },
             },
-            animation: {
-              'spin-slow': 'spin 12s linear infinite',
-              'pulse-glow': 'pulseGlow 2.5s ease-in-out infinite',
-              'spark-float': 'sparkFloat 3s ease-in-out infinite',
-              'border-glow': 'borderGlow 4s linear infinite',
-            },
-            keyframes: {
-              pulseGlow: {
-                '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
-                '50%': { opacity: '0.8', transform: 'scale(1.04)' },
-              },
-              sparkFloat: {
-                '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-                '50%': { transform: 'translateY(-6px) rotate(4deg)' },
-              },
-              borderGlow: {
-                '0%': { backgroundPosition: '0% 50%' },
-                '50%': { backgroundPosition: '100% 50%' },
-                '100%': { backgroundPosition: '0% 50%' },
-              },
+            borderGlow: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
             },
           },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <style>
-      /* Base resets & typography */
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #06060c;
-        color: #e4e1eb;
-        font-family: 'Outfit', sans-serif;
-        overflow-x: hidden;
-        user-select: none;
-        -webkit-font-smoothing: antialiased;
+  <style>
+    /* Base resets & typography */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #06060c;
+      color: #e4e1eb;
+      font-family: 'Outfit', sans-serif;
+      overflow-x: hidden;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(6, 6, 12, 0.8);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 242, 254, 0.25);
+      border-radius: 999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 242, 254, 0.6);
+    }
+
+    /* Glassmorphism styling (Flipped 30% opacity translucent purple glass) */
+    .glass-card {
+      background: rgba(18, 7, 34, 0.30);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow:
+        0 0 50px rgba(168, 85, 247, 0.22),
+        0 0 90px rgba(126, 34, 206, 0.12),
+        inset 0 1px 1px rgba(255, 255, 255, 0.14),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    .glass-border-anim {
+      position: relative;
+      background-clip: padding-box;
+    }
+
+    .glass-border-anim::before {
+      content: '';
+      position: absolute;
+      inset: -1.5px;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.75), rgba(216, 180, 254, 0.35), rgba(192, 132, 252, 0.65), rgba(126, 34, 206, 0.85));
+      background-size: 300% 300%;
+      animation: borderGlow 6s ease infinite;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Neon text glow utilities */
+    .glow-text-purple {
+      text-shadow: 0 0 12px rgba(168, 85, 247, 0.75), 0 0 24px rgba(147, 51, 234, 0.45);
+    }
+
+    .glow-text-cyan {
+      text-shadow: 0 0 12px rgba(0, 242, 254, 0.65), 0 0 24px rgba(0, 242, 254, 0.35);
+    }
+
+    .glow-text-gold {
+      text-shadow: 0 0 12px rgba(251, 191, 36, 0.7), 0 0 24px rgba(245, 158, 11, 0.4);
+    }
+
+    .glow-dual,
+    .glow-purple-gradient {
+      background: linear-gradient(135deg, #e9d5ff 0%, #ffffff 40%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.55));
+    }
+
+    /* Equalizer bars animation */
+    .eq-bar {
+      transition: height 0.08s ease-in-out;
+    }
+
+    /* Vinyl rotation */
+    .spinning-vinyl {
+      animation: spin 6s linear infinite;
+    }
+
+    .spinning-vinyl.paused {
+      animation-play-state: paused;
+    }
+
+    /* Custom range slider thumb */
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      margin-top: -5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #00f2fe;
+      box-shadow: 0 0 10px #00f2fe, 0 0 20px rgba(0, 242, 254, 0.8);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.25);
+    }
+
+    /* 3D Flip Scene & Tilt Container */
+    .flip-scene {
+      perspective: 1400px;
+      cursor: pointer;
+    }
+
+    .flip-scene.is-flipped {
+      cursor: default;
+    }
+
+    .tilt-wrapper {
+      transition: transform 0.15s ease-out;
+      transform-style: preserve-3d;
+      width: 100%;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.85s cubic-bezier(0.34, 1.25, 0.64, 1);
+    }
+
+    .flip-card-face {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform-style: flat;
+    }
+
+    .flip-card-front {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotateY(0deg) translateZ(1px);
+      z-index: 2;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .flip-card-back {
+      position: relative;
+      width: 100%;
+      transform: rotateY(180deg) translateZ(1px);
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    /* FLIPPED STATE: Triggered on Click */
+    .flip-scene.is-flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-scene.is-flipped .flip-card-front {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      z-index: -10 !important;
+      transform: rotateY(0deg) translateZ(-50px) !important;
+    }
+
+    .flip-scene.is-flipped .flip-card-back {
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+      z-index: 20 !important;
+      backface-visibility: visible !important;
+      -webkit-backface-visibility: visible !important;
+      transform: rotateY(180deg) translateZ(2px) !important;
+    }
+
+    .flip-card-back #profile-card {
+      background: rgba(88, 28, 135, 0.01) !important;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 0 50px rgba(168, 85, 247, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+      pointer-events: auto !important;
+    }
+
+    /* Connected Social Tiles System (Dark Theme matching Activity Bar) */
+    .social-tiles-container {
+      pointer-events: auto !important;
+      position: relative;
+      z-index: 10;
+    }
+
+    .social-tile {
+      position: relative;
+      display: flex;
+      cursor: pointer !important;
+      pointer-events: auto !important;
+      background-color: rgba(26, 23, 40, 0.85) !important;
+      border: 1px solid rgba(168, 85, 247, 0.25) !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transform: scale(1) translateY(0);
+      transition: transform 0.22s cubic-bezier(0.34, 1.8, 0.64, 1),
+        box-shadow 0.22s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease !important;
+      will-change: transform;
+      z-index: 10;
+      touch-action: manipulation;
+    }
+
+    .social-tile * {
+      pointer-events: none;
+    }
+
+    /* Snappy Spring Scale-Up on Hover */
+    .social-tile:hover {
+      transform: scale(1.09) translateY(-6px) !important;
+      background-color: #201c34 !important;
+      z-index: 50 !important;
+    }
+
+    .social-tile:active {
+      transform: scale(0.97) translateY(-2px) !important;
+    }
+
+    .social-tile .tile-icon {
+      transition: transform 0.22s cubic-bezier(0.34, 1.8, 0.64, 1), border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .social-tile:hover .tile-icon {
+      transform: scale(1.18) !important;
+    }
+
+    /* Platform Brand Glowing Bloom on Hover */
+    #btn-social-discord:hover {
+      border-color: rgba(88, 101, 242, 0.85) !important;
+      background-color: #1c1a32 !important;
+      box-shadow: 0 16px 36px rgba(88, 101, 242, 0.45), 0 0 20px rgba(88, 101, 242, 0.3) !important;
+    }
+
+    #btn-social-discord:hover .tile-icon {
+      border-color: rgba(88, 101, 242, 0.5) !important;
+    }
+
+    #btn-social-valorant:hover {
+      border-color: rgba(255, 70, 85, 0.85) !important;
+      background-color: #241620 !important;
+      box-shadow: 0 16px 36px rgba(255, 70, 85, 0.45), 0 0 20px rgba(255, 70, 85, 0.3) !important;
+    }
+
+    #btn-social-valorant:hover .tile-icon {
+      border-color: rgba(255, 70, 85, 0.5) !important;
+    }
+
+    #link-youtube:hover {
+      border-color: rgba(255, 0, 0, 0.85) !important;
+      background-color: #24151a !important;
+      box-shadow: 0 16px 36px rgba(255, 0, 0, 0.45), 0 0 20px rgba(255, 0, 0, 0.3) !important;
+    }
+
+    #link-youtube:hover .tile-icon {
+      border-color: rgba(255, 0, 0, 0.5) !important;
+    }
+
+    #link-instagram:hover {
+      border-color: rgba(225, 48, 108, 0.85) !important;
+      background-color: #241526 !important;
+      box-shadow: 0 16px 36px rgba(225, 48, 108, 0.45), 0 0 20px rgba(225, 48, 108, 0.3) !important;
+    }
+
+    #link-instagram:hover .tile-icon {
+      border-color: rgba(225, 48, 108, 0.5) !important;
+    }
+
+    #link-steam:hover {
+      border-color: rgba(102, 192, 244, 0.85) !important;
+      background-color: #171d30 !important;
+      box-shadow: 0 16px 36px rgba(102, 192, 244, 0.45), 0 0 20px rgba(102, 192, 244, 0.3) !important;
+    }
+
+    #link-steam:hover .tile-icon {
+      border-color: rgba(102, 192, 244, 0.5) !important;
+    }
+
+    #link-spotify:hover {
+      border-color: rgba(29, 185, 84, 0.85) !important;
+      background-color: #15221e !important;
+      box-shadow: 0 16px 36px rgba(29, 185, 84, 0.45), 0 0 20px rgba(29, 185, 84, 0.3) !important;
+    }
+
+    #link-spotify:hover .tile-icon {
+      border-color: rgba(29, 185, 84, 0.5) !important;
+    }
+
+    /* Dynamic Spring Float on Click */
+    @keyframes tileClickFloat {
+      0% {
+        transform: translateY(-2px) scale(0.97);
       }
 
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: rgba(6, 6, 12, 0.8);
-      }
-      ::-webkit-scrollbar-thumb {
-        background: rgba(0, 242, 254, 0.25);
-        border-radius: 999px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(0, 242, 254, 0.6);
+      40% {
+        transform: translateY(-12px) scale(1.08);
+        box-shadow: 0 16px 36px rgba(192, 132, 252, 0.6), 0 0 24px rgba(0, 242, 254, 0.5);
       }
 
-      /* Glassmorphism styling (Flipped 30% opacity translucent purple glass) */
-      .glass-card {
-        background: rgba(18, 7, 34, 0.30);
-        backdrop-filter: blur(24px);
-        -webkit-backdrop-filter: blur(24px);
-        box-shadow: 
-          0 0 50px rgba(168, 85, 247, 0.22),
-          0 0 90px rgba(126, 34, 206, 0.12),
-          inset 0 1px 1px rgba(255, 255, 255, 0.14),
-          inset 0 -1px 1px rgba(0, 0, 0, 0.4);
+      75% {
+        transform: translateY(-6px) scale(1.03);
       }
 
-      .glass-border-anim {
-        position: relative;
-        background-clip: padding-box;
+      100% {
+        transform: translateY(0) scale(1);
       }
-      .glass-border-anim::before {
-        content: '';
-        position: absolute;
-        inset: -1.5px;
-        border-radius: 34px;
-        background: linear-gradient(135deg, rgba(168, 85, 247, 0.75), rgba(216, 180, 254, 0.35), rgba(192, 132, 252, 0.65), rgba(126, 34, 206, 0.85));
-        background-size: 300% 300%;
-        animation: borderGlow 6s ease infinite;
-        z-index: -1;
-        pointer-events: none;
-      }
+    }
 
-      /* Neon text glow utilities */
-      .glow-text-purple {
-        text-shadow: 0 0 12px rgba(168, 85, 247, 0.75), 0 0 24px rgba(147, 51, 234, 0.45);
-      }
-      .glow-text-cyan {
-        text-shadow: 0 0 12px rgba(0, 242, 254, 0.65), 0 0 24px rgba(0, 242, 254, 0.35);
-      }
-      .glow-text-gold {
-        text-shadow: 0 0 12px rgba(251, 191, 36, 0.7), 0 0 24px rgba(245, 158, 11, 0.4);
-      }
-      .glow-dual, .glow-purple-gradient {
-        background: linear-gradient(135deg, #e9d5ff 0%, #ffffff 40%, #c084fc 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.55));
-      }
+    .social-tile.is-floating-clicked {
+      animation: tileClickFloat 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+      z-index: 40;
+    }
 
-      /* Equalizer bars animation */
-      .eq-bar {
-        transition: height 0.08s ease-in-out;
-      }
-
-      /* Vinyl rotation */
-      .spinning-vinyl {
-        animation: spin 6s linear infinite;
-      }
-      .spinning-vinyl.paused {
-        animation-play-state: paused;
-      }
-
-      /* Custom range slider thumb */
-      input[type=range] {
-        -webkit-appearance: none;
-        appearance: none;
-        background: transparent;
-      }
-      input[type=range]::-webkit-slider-runnable-track {
-        height: 4px;
-        border-radius: 2px;
-        background: rgba(255, 255, 255, 0.12);
-      }
-      input[type=range]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        margin-top: -5px;
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background: #00f2fe;
-        box-shadow: 0 0 10px #00f2fe, 0 0 20px rgba(0, 242, 254, 0.8);
-        cursor: pointer;
-        transition: transform 0.15s ease;
-      }
-      input[type=range]::-webkit-slider-thumb:hover {
-        transform: scale(1.25);
-      }
-
-      /* 3D Flip Scene & Tilt Container */
-      .flip-scene {
-        perspective: 1400px;
-        cursor: pointer;
-      }
-      .flip-scene.is-flipped {
-        cursor: default;
-      }
-      .tilt-wrapper {
-        transition: transform 0.15s ease-out;
-        transform-style: preserve-3d;
-        width: 100%;
-      }
-      .flip-card-inner {
-        position: relative;
-        width: 100%;
-        transform-style: preserve-3d;
-        transition: transform 0.85s cubic-bezier(0.34, 1.25, 0.64, 1);
-      }
-      .flip-card-face {
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        transform-style: flat;
-      }
-      .flip-card-front {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        transform: rotateY(0deg) translateZ(1px);
-        z-index: 2;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transition: opacity 0.35s ease, visibility 0.35s ease;
-      }
-      .flip-card-back {
-        position: relative;
-        width: 100%;
-        transform: rotateY(180deg) translateZ(1px);
-        z-index: 1;
+    /* Diagonal Glow Wiping Beam Animation across the front card */
+    @keyframes diagonalGlowWipe {
+      0% {
+        transform: rotate(-35deg) translateY(-880px);
         opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity 0.35s ease, visibility 0.35s ease;
       }
 
-      /* FLIPPED STATE: Triggered on Click */
-      .flip-scene.is-flipped .flip-card-inner {
-        transform: rotateY(180deg);
-      }
-      .flip-scene.is-flipped .flip-card-front {
-        opacity: 0 !important;
-        visibility: hidden !important;
-        pointer-events: none !important;
-        z-index: -10 !important;
-        transform: rotateY(0deg) translateZ(-50px) !important;
-      }
-      .flip-scene.is-flipped .flip-card-back {
-        opacity: 1 !important;
-        visibility: visible !important;
-        pointer-events: auto !important;
-        z-index: 20 !important;
-        backface-visibility: visible !important;
-        -webkit-backface-visibility: visible !important;
-        transform: rotateY(180deg) translateZ(2px) !important;
-      }
-      .flip-card-back #profile-card {
-        background: rgba(88, 28, 135, 0.01) !important;
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        box-shadow: 0 0 50px rgba(168, 85, 247, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-        pointer-events: auto !important;
+      10% {
+        opacity: 1;
       }
 
-      /* Connected Social Tiles System (Dark Theme matching Activity Bar) */
-      .social-tiles-container {
-        pointer-events: auto !important;
-        position: relative;
-        z-index: 10;
-      }
-      .social-tile {
-        position: relative;
-        display: flex;
-        cursor: pointer !important;
-        pointer-events: auto !important;
-        background-color: rgba(26, 23, 40, 0.85) !important;
-        border: 1px solid rgba(168, 85, 247, 0.25) !important;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        transform: scale(1) translateY(0);
-        transition: transform 0.22s cubic-bezier(0.34, 1.8, 0.64, 1), 
-                    box-shadow 0.22s ease, 
-                    border-color 0.2s ease, 
-                    background-color 0.2s ease !important;
-        will-change: transform;
-        z-index: 10;
-        touch-action: manipulation;
-      }
-      .social-tile * {
-        pointer-events: none;
+      85% {
+        opacity: 1;
       }
 
-      /* Snappy Spring Scale-Up on Hover */
-      .social-tile:hover {
-        transform: scale(1.09) translateY(-6px) !important;
-        background-color: #201c34 !important;
-        z-index: 50 !important;
+      100% {
+        transform: rotate(-35deg) translateY(880px);
+        opacity: 0;
       }
-      .social-tile:active {
-        transform: scale(0.97) translateY(-2px) !important;
-      }
-      .social-tile .tile-icon {
-        transition: transform 0.22s cubic-bezier(0.34, 1.8, 0.64, 1), border-color 0.2s ease, background-color 0.2s ease;
-      }
-      .social-tile:hover .tile-icon {
-        transform: scale(1.18) !important;
-      }
+    }
 
-      /* Platform Brand Glowing Bloom on Hover */
-      #btn-social-discord:hover {
-        border-color: rgba(88, 101, 242, 0.85) !important;
-        background-color: #1c1a32 !important;
-        box-shadow: 0 16px 36px rgba(88, 101, 242, 0.45), 0 0 20px rgba(88, 101, 242, 0.3) !important;
-      }
-      #btn-social-discord:hover .tile-icon {
-        border-color: rgba(88, 101, 242, 0.5) !important;
-      }
+    .glow-wipe-scanner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 320%;
+      height: 150px;
+      margin-top: -75px;
+      margin-left: -160%;
+      pointer-events: none;
+      animation: diagonalGlowWipe 3.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      z-index: 20;
+      transform-origin: center center;
+    }
 
-      #btn-social-valorant:hover {
-        border-color: rgba(255, 70, 85, 0.85) !important;
-        background-color: #241620 !important;
-        box-shadow: 0 16px 36px rgba(255, 70, 85, 0.45), 0 0 20px rgba(255, 70, 85, 0.3) !important;
-      }
-      #btn-social-valorant:hover .tile-icon {
-        border-color: rgba(255, 70, 85, 0.5) !important;
-      }
-
-      #link-youtube:hover {
-        border-color: rgba(255, 0, 0, 0.85) !important;
-        background-color: #24151a !important;
-        box-shadow: 0 16px 36px rgba(255, 0, 0, 0.45), 0 0 20px rgba(255, 0, 0, 0.3) !important;
-      }
-      #link-youtube:hover .tile-icon {
-        border-color: rgba(255, 0, 0, 0.5) !important;
-      }
-
-      #link-instagram:hover {
-        border-color: rgba(225, 48, 108, 0.85) !important;
-        background-color: #241526 !important;
-        box-shadow: 0 16px 36px rgba(225, 48, 108, 0.45), 0 0 20px rgba(225, 48, 108, 0.3) !important;
-      }
-      #link-instagram:hover .tile-icon {
-        border-color: rgba(225, 48, 108, 0.5) !important;
-      }
-
-      #link-steam:hover {
-        border-color: rgba(102, 192, 244, 0.85) !important;
-        background-color: #171d30 !important;
-        box-shadow: 0 16px 36px rgba(102, 192, 244, 0.45), 0 0 20px rgba(102, 192, 244, 0.3) !important;
-      }
-      #link-steam:hover .tile-icon {
-        border-color: rgba(102, 192, 244, 0.5) !important;
-      }
-
-      #link-spotify:hover {
-        border-color: rgba(29, 185, 84, 0.85) !important;
-        background-color: #15221e !important;
-        box-shadow: 0 16px 36px rgba(29, 185, 84, 0.45), 0 0 20px rgba(29, 185, 84, 0.3) !important;
-      }
-      #link-spotify:hover .tile-icon {
-        border-color: rgba(29, 185, 84, 0.5) !important;
-      }
-
-      /* Dynamic Spring Float on Click */
-      @keyframes tileClickFloat {
-        0% {
-          transform: translateY(-2px) scale(0.97);
-        }
-        40% {
-          transform: translateY(-12px) scale(1.08);
-          box-shadow: 0 16px 36px rgba(192, 132, 252, 0.6), 0 0 24px rgba(0, 242, 254, 0.5);
-        }
-        75% {
-          transform: translateY(-6px) scale(1.03);
-        }
-        100% {
-          transform: translateY(0) scale(1);
-        }
-      }
-
-      .social-tile.is-floating-clicked {
-        animation: tileClickFloat 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
-        z-index: 40;
-      }
-
-      /* Diagonal Glow Wiping Beam Animation across the front card */
-      @keyframes diagonalGlowWipe {
-        0% {
-          transform: rotate(-35deg) translateY(-880px);
-          opacity: 0;
-        }
-        10% {
-          opacity: 1;
-        }
-        85% {
-          opacity: 1;
-        }
-        100% {
-          transform: rotate(-35deg) translateY(880px);
-          opacity: 0;
-        }
-      }
-
-      .glow-wipe-scanner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 320%;
-        height: 150px;
-        margin-top: -75px;
-        margin-left: -160%;
-        pointer-events: none;
-        animation: diagonalGlowWipe 3.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        z-index: 20;
-        transform-origin: center center;
-      }
-
-      .glow-wipe-ambient {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to bottom,
+    .glow-wipe-ambient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom,
           transparent 0%,
           rgba(168, 85, 247, 0.08) 25%,
           rgba(192, 132, 252, 0.45) 48%,
           rgba(255, 255, 255, 0.95) 50%,
           rgba(0, 242, 254, 0.55) 52%,
           rgba(168, 85, 247, 0.15) 75%,
-          transparent 100%
-        );
-        filter: blur(12px);
-      }
+          transparent 100%);
+      filter: blur(12px);
+    }
 
-      .glow-wipe-core {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 50%;
-        height: 2.5px;
-        background: linear-gradient(
-          90deg,
+    .glow-wipe-core {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 2.5px;
+      background: linear-gradient(90deg,
           transparent 0%,
           rgba(168, 85, 247, 0.8) 15%,
           #ffffff 50%,
           rgba(0, 242, 254, 0.85) 85%,
-          transparent 100%
-        );
-        box-shadow: 
-          0 0 16px #e9d5ff,
-          0 0 32px #a855f7,
-          0 0 52px #00f2fe;
-      }
+          transparent 100%);
+      box-shadow:
+        0 0 16px #e9d5ff,
+        0 0 32px #a855f7,
+        0 0 52px #00f2fe;
+    }
 
-      /* Custom Cursor (Purple Neon Theme) */
-      .custom-cursor-dot {
-        position: fixed;
-        width: 8px;
-        height: 8px;
-        background: #c084fc;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transform: translate(-50%, -50%);
-        box-shadow: 0 0 12px #c084fc, 0 0 20px #a855f7;
-        transition: transform 0.06s ease-out, opacity 0.2s ease;
-      }
-      .custom-cursor-ring {
-        position: fixed;
-        width: 32px;
-        height: 32px;
-        border: 1.5px solid rgba(192, 132, 252, 0.6);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        transform: translate(-50%, -50%);
-        transition: transform 0.14s ease-out, width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
-      }
+    /* Custom Cursor (Purple Neon Theme) */
+    .custom-cursor-dot {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: #c084fc;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 12px #c084fc, 0 0 20px #a855f7;
+      transition: transform 0.06s ease-out, opacity 0.2s ease;
+    }
 
-      /* Tooltip hover helper */
-      .tooltip-trigger:hover .tooltip-content {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
-      .tooltip-content {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(4px);
-        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-    </style>
-  </head>
-  <body class="min-h-screen relative flex items-center justify-center p-3 sm:p-6 overflow-x-hidden selection:bg-cyan-500/30 selection:text-white">
-    <!-- Custom Glowing Cursor -->
-    <div id="cursor-dot" class="custom-cursor-dot opacity-0 hidden md:block"></div>
-    <div id="cursor-ring" class="custom-cursor-ring opacity-0 hidden md:block"></div>
+    .custom-cursor-ring {
+      position: fixed;
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid rgba(192, 132, 252, 0.6);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: transform 0.14s ease-out, width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+    }
 
-    <!-- Background Looping Video & Animated Backup Fallback -->
-    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-      <video
-        id="bg-video"
-        autoplay
-        loop
-        muted
-        playsinline
-        class="w-full h-full object-cover opacity-45 scale-105 filter brightness-75 contrast-125 transition-opacity duration-1000"
-        poster="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1920&q=80"
-      >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-clouds-and-blue-sky-2408-large.mp4" type="video/mp4" />
-      </video>
+    /* Tooltip hover helper */
+    .tooltip-trigger:hover .tooltip-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
 
-      <!-- Ambient Deep Vignette Gradient Overlays -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[#06060c] via-[#06060c]/65 to-[#06060c]/85"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#06060c_90%)]"></div>
-      <!-- Subtle Purple & Indigo Aurora Orbs -->
-      <div class="absolute -top-32 -left-32 w-96 h-96 bg-purple-500/15 rounded-full blur-[120px] pointer-events-none"></div>
-      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-500/15 rounded-full blur-[120px] pointer-events-none"></div>
+    .tooltip-content {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(4px);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+
+<body
+  class="min-h-[100dvh] relative flex flex-col items-center justify-start sm:justify-center p-2.5 sm:p-6 overflow-x-hidden selection:bg-cyan-500/30 selection:text-white">
+  <!-- Custom Glowing Cursor -->
+  <div id="cursor-dot" class="custom-cursor-dot opacity-0 hidden md:block"></div>
+  <div id="cursor-ring" class="custom-cursor-ring opacity-0 hidden md:block"></div>
+
+  <!-- Background Looping Video & Animated Backup Fallback -->
+  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <video id="bg-video" autoplay loop muted playsinline
+      class="w-full h-full object-cover opacity-45 scale-105 filter brightness-75 contrast-125 transition-opacity duration-1000"
+      poster="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1920&q=80">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-clouds-and-blue-sky-2408-large.mp4"
+        type="video/mp4" />
+    </video>
+
+    <!-- Ambient Deep Vignette Gradient Overlays -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#06060c] via-[#06060c]/65 to-[#06060c]/85"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#06060c_90%)]"></div>
+    <!-- Subtle Purple & Indigo Aurora Orbs -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-purple-500/15 rounded-full blur-[120px] pointer-events-none">
     </div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-500/15 rounded-full blur-[120px] pointer-events-none">
+    </div>
+  </div>
 
-    <!-- Antigravity Interactive Particles Canvas -->
-    <canvas id="particle-canvas" class="fixed inset-0 z-[1] pointer-events-none"></canvas>
+  <!-- Antigravity Interactive Particles Canvas -->
+  <canvas id="particle-canvas" class="fixed inset-0 z-[1] pointer-events-none"></canvas>
 
-    <!-- Top Action Bar (Background Video Audio & Volume Control) -->
-    <header class="fixed top-4 right-4 z-40 flex items-center">
-      <div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-void-card/90 border border-white/10 text-white/90 hover:border-purple-400/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.35)] transition-all backdrop-blur-xl group shadow-2xl">
-        <!-- Voice / Mute Button -->
-        <button
-          id="btn-quick-mute"
-          type="button"
-          title="Toggle Mute (M)"
-          class="hover:text-purple-300 transition-colors cursor-pointer flex items-center justify-center p-0.5"
-        >
-          <svg id="icon-vol-high" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z" />
-          </svg>
-          <svg id="icon-vol-muted" class="w-5 h-5 hidden text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-          </svg>
-        </button>
-
-        <!-- Video Volume Slider -->
-        <input
-          type="range"
-          id="video-volume-slider"
-          min="0"
-          max="1"
-          step="0.01"
-          value="0.5"
-          class="w-16 sm:w-20 h-1 bg-white/15 rounded cursor-pointer accent-purple-400 transition-all"
-          title="Adjust Video Volume"
-        />
-
-        <!-- Volume Percentage -->
-        <span id="video-volume-percent" class="font-mono text-[11px] text-purple-200 w-7 text-right select-none">50%</span>
-      </div>
-    </header>
-
-    <!-- MAIN CENTRAL 3D FLIP CONTAINER -->
-    <main class="flip-scene relative z-10 w-full max-w-[580px] my-8 sm:my-10">
-      <div id="tilt-wrapper" class="tilt-wrapper">
-        <div id="flip-card-inner" class="flip-card-inner">
-
-          <!-- FRONT FACE: Luffy Anime Artwork Poster + Top-to-Bottom Glow Wipe -->
-          <div
-            id="card-front-face"
-            class="flip-card-face flip-card-front rounded-[32px] overflow-hidden glass-card glass-border-anim border border-purple-500/40 shadow-[0_0_50px_rgba(168,85,247,0.35)] cursor-pointer select-none group"
-          >
-            <div class="relative w-full h-full flex flex-col justify-between p-6 sm:p-8 overflow-hidden bg-[#07050d]">
-              <!-- Anime Background Artwork -->
-              <img
-                src="/card-front.jpg"
-                alt="Sun God Nika / Luffy Poster"
-                class="absolute inset-0 w-full h-full object-cover object-top filter brightness-[0.96] contrast-110 transition-transform duration-700 group-hover:scale-105"
-              />
-
-              <!-- Atmospheric Vignettes & Overlays -->
-              <div class="absolute inset-0 bg-gradient-to-t from-[#06060c] via-transparent to-[#06060c]/60 pointer-events-none"></div>
-              <div class="absolute inset-0 bg-purple-950/20 mix-blend-color pointer-events-none"></div>
-              <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[32px] pointer-events-none"></div>
-
-              <!-- TOP-TO-BOTTOM GLOW WIPING LASER BEAM -->
-              <div class="glow-wipe-scanner pointer-events-none">
-                <div class="glow-wipe-ambient"></div>
-                <div class="glow-wipe-core"></div>
-              </div>
-
-              <!-- Top Floating Badges -->
-              <div class="relative z-10 flex items-center justify-between w-full">
-                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/65 border border-purple-400/40 backdrop-blur-md shadow-lg">
-                  <span class="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
-                  <span class="font-mono text-[11px] font-bold tracking-widest text-purple-200 uppercase">JOYBOY // NIKA</span>
-                </div>
-              </div>
-
-              <!-- Bottom Interactive Prompt -->
-              <div class="relative z-10 flex flex-col items-center text-center gap-2 pt-16">
-                <div class="px-5 py-2.5 rounded-full bg-black/80 border border-purple-400/60 backdrop-blur-xl shadow-[0_0_30px_rgba(168,85,247,0.5)] flex items-center gap-2.5 group-hover:border-cyan-400 group-hover:shadow-[0_0_30px_rgba(0,242,254,0.5)] transition-all">
-                  <svg class="w-4 h-4 text-purple-300 animate-spin-slow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
-                  <span class="font-syne font-bold text-xs sm:text-sm tracking-widest text-white uppercase glow-text-cyan">
-                    [ CLICK TO REVEAL PROFILE ]
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- BACK FACE: Live Discord Statistics & Profile Card -->
-          <div id="card-back-face" class="flip-card-face flip-card-back w-full">
-            <div
-              id="profile-card"
-              class="glass-card glass-border-anim rounded-[32px] p-6 sm:p-8 flex flex-col gap-6 relative overflow-hidden"
-            >
-              <!-- Flip back quick button on top left of back face -->
-              <button
-                id="btn-flip-back"
-                type="button"
-                title="Flip back to front poster"
-                class="absolute top-4 left-4 z-30 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-purple-950/70 hover:bg-purple-900 border border-purple-500/40 hover:border-purple-400 backdrop-blur-md text-purple-200 hover:text-white font-mono text-[11px] font-semibold transition-all cursor-pointer shadow-md select-none pointer-events-auto"
-              >
-                <svg class="w-3.5 h-3.5 text-purple-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                <span>FLIP BACK</span>
-              </button>
-
-              <!-- Subtle Top Ambient Glow Arc -->
-              <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-72 h-20 bg-gradient-to-b from-purple-500/10 via-fuchsia-500/05 to-transparent blur-2xl pointer-events-none"></div>
-
-        <!-- 1. Header Section: Avatar, Pulse Status, Name & Badges -->
-        <div class="flex flex-col items-center text-center relative z-10 pt-2">
-          <!-- Avatar Frame with Live Pulsing Status Ring -->
-          <div class="relative group mb-4">
-            <!-- Pulsing outer aura ring -->
-            <div
-              id="avatar-halo"
-              class="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-purple-500 via-fuchsia-500 to-indigo-500 opacity-75 blur-md group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow"
-            ></div>
-
-            <!-- Avatar Frame Container with Decoration & Status -->
-            <div class="relative w-28 h-28 sm:w-32 sm:h-32 mx-auto">
-              <!-- Rounded avatar image with overflow hidden -->
-              <div class="w-full h-full rounded-full overflow-hidden border-2 border-purple-400/30 bg-zinc-900/90 shadow-2xl relative">
-                <img
-                  id="profile-avatar"
-                  src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80"
-                  alt="Profile Avatar"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="eager"
-                />
-              </div>
-
-              <!-- Live Discord Avatar Decoration (layered on top, unclipped) -->
-              <div
-                id="avatar-decoration-wrap"
-                class="absolute -inset-[14%] pointer-events-none z-20 hidden items-center justify-center"
-              >
-                <img
-                  id="avatar-decoration-img"
-                  src=""
-                  alt=""
-                  class="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]"
-                />
-              </div>
-
-              <!-- Live Discord Status Indicator Badge -->
-              <div
-                id="status-indicator-badge"
-                title="Discord Status"
-                class="absolute bottom-0 right-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#0d0d16] p-0.5 border-2 border-[#0d0d16] z-30 transition-transform duration-200 group-hover:scale-110 flex items-center justify-center shadow-[0_0_12px_#10b981]"
-              >
-                <div id="status-icon-inner" class="w-full h-full flex items-center justify-center">
-                  <svg class="w-full h-full" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#23a55a"/></svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Handle & Custom Gradient Headline -->
-          <h1
-            id="profile-name"
-            class="font-syne font-extrabold text-3xl sm:text-4xl tracking-tight glow-purple-gradient hover:brightness-110 transition-all cursor-default"
-          >
-            SunGodNika
-          </h1>
-
-          <!-- Live Discord Identity Badges: nika.nx8 [CODE] 💎 -->
-          <div class="flex items-center justify-center gap-2 mt-1.5 select-none flex-wrap">
-            <span id="discord-username-display" class="font-sans font-bold text-sm sm:text-base text-[#ff6224] tracking-tight">nika.nx8</span>
-            
-            <!-- Clan Tag Pill [🔥 CODE] -->
-            <div id="presence-clan-badge" class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-black/45 border border-[#ff6224]/35 backdrop-blur-sm select-none">
-              <img
-                id="presence-clan-icon"
-                src="https://cdn.discordapp.com/clan-badges/547906569489350657/3858554c542da4e8e4b52ff00a558ced.png"
-                alt="CODE"
-                class="w-3.5 h-3.5 object-contain"
-              />
-              <span id="presence-clan-tag" class="font-mono font-bold text-[11px] text-[#ff6224] leading-none">CODE</span>
-            </div>
-
-            <!-- Discord Nitro Booster Purple Diamond Badge -->
-            <span id="presence-booster-badge" title="Nitro Server Booster" class="inline-flex items-center text-[#c084fc] flex-shrink-0 select-none">
-              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.5L5 9.5L12 21.5L19 9.5L12 2.5ZM12 7.5L15 10.5L12 16.5L9 10.5L12 7.5Z"/>
-              </svg>
-            </span>
-          </div>
-
-          <!-- Dynamic Subtitle -->
-          <p id="profile-subtitle" class="font-mono text-xs sm:text-sm text-purple-300/90 tracking-widest uppercase mt-2 flex items-center justify-center gap-2">
-            <span class="inline-block w-2 h-0.5 bg-purple-400"></span>
-            <span>Joyboy // Fast As Lightning</span>
-            <span class="inline-block w-2 h-0.5 bg-purple-400"></span>
-          </p>
-
-          <!-- Bio Description -->
-          <p id="profile-bio" class="text-sm sm:text-base text-purple-100/85 max-w-md mx-auto mt-3 leading-relaxed font-light">
-            as long as i live , i have infinite chances...
-          </p>
-        </div>
-
-        <!-- 2. LIVE DISCORD ACTIVITIES SECTION (Matching Discord Native Multi-Activity UI 1:1) -->
-        <section class="flex flex-col gap-2 w-full text-left">
-          <div class="flex items-center justify-between px-1">
-            <span class="font-sans text-[12px] font-bold text-zinc-400 tracking-wide select-none">
-              Current activity
-            </span>
-            <div id="lanyard-sync-indicator" class="flex items-center gap-1.5 text-[11px] font-mono text-emerald-400/80">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>LIVE</span>
-            </div>
-          </div>
-
-          <!-- Dynamic Activities Container (Stacks multiple activities: VS Code, Spotify, Games, etc.) -->
-          <div id="discord-activities-container" class="flex flex-col gap-2.5 w-full">
-            <div class="rounded-[20px] bg-[#1a1728]/85 border border-purple-500/25 p-3.5 sm:p-4 relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md">
-              <div class="flex items-center gap-3.5">
-                <div class="w-14 h-14 rounded-2xl overflow-hidden bg-[#15141f] border border-white/10 flex items-center justify-center text-[#5865F2] flex-shrink-0">
-                  <svg class="w-7 h-7 fill-current animate-pulse" viewBox="0 0 24 24">
-                    <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.894.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-                  </svg>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <h4 class="font-bold text-white text-[15px] sm:text-base leading-snug truncate">Connecting to Discord...</h4>
-                  <p class="text-xs text-purple-300/80 font-mono mt-0.5">Syncing with live Lanyard socket...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 4. CONNECTED PROFILES GRID (6-Item Symmetric Layout) -->
-        <section class="flex flex-col gap-2">
-          <div class="flex items-center justify-between px-1">
-            <span class="font-mono text-xs text-purple-300/90 tracking-wider uppercase">
-              CONNECTED FREQUENCIES
-            </span>
-            <span class="font-mono text-[11px] text-purple-400/70 uppercase">Profiles</span>
-          </div>
-
-          <div id="social-tiles-container" class="social-tiles-container grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-            <!-- 1. Discord Profile Card (Copy Action) -->
-            <button
-              id="btn-social-discord"
-              type="button"
-              title="Click to copy Discord ID"
-              class="social-tile flex items-center justify-between gap-2.5 p-3 rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group text-left relative overflow-hidden select-none cursor-pointer"
-            >
-              <div class="flex items-center gap-2.5 min-w-0">
-                <div class="tile-icon p-2 rounded-xl bg-[#15141f] border border-white/10 text-[#5865F2] transition-transform flex-shrink-0 shadow-sm">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.894.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.028z"/>
-                  </svg>
-                </div>
-                <div class="min-w-0">
-                  <span class="block text-xs font-semibold text-white group-hover:text-[#8da2ff] transition-colors">Discord</span>
-                  <span id="social-discord-val" class="block font-mono text-[11px] text-zinc-400 truncate">nika.nx8</span>
-                </div>
-              </div>
-              <span id="badge-discord" class="tile-badge shrink-0 text-[9px] font-mono font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#15141f] text-zinc-300 border border-white/10 group-hover:border-[#5865F2] group-hover:text-white transition-all">COPY</span>
-            </button>
-
-            <!-- 2. Valorant Profile Card (Copy Action) -->
-            <button
-              id="btn-social-valorant"
-              type="button"
-              title="Click to copy Valorant ID"
-              class="social-tile flex items-center justify-between gap-2.5 p-3 rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden select-none text-left cursor-pointer"
-            >
-              <div class="flex items-center gap-2.5 min-w-0">
-                <div class="tile-icon p-2 rounded-xl bg-[#15141f] border border-white/10 text-[#FF4655] transition-transform flex-shrink-0 shadow-sm">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 100 100">
-                    <path d="M99.25 19.5L62.75 80.5H37.25L0.75 19.5H23.5L50 63.75L76.5 19.5H99.25Z" />
-                  </svg>
-                </div>
-                <div class="min-w-0">
-                  <span class="block text-xs font-semibold text-white group-hover:text-[#FF4655] transition-colors">Valorant</span>
-                  <span id="social-valorant-val" class="block font-mono text-[11px] text-zinc-400 truncate" title="SunGodNikaカ#Edits">SunGodNikaカ#Edits</span>
-                </div>
-              </div>
-              <span id="badge-valorant" class="tile-badge shrink-0 text-[9px] font-mono font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#15141f] text-zinc-300 border border-white/10 group-hover:border-[#FF4655] group-hover:text-white transition-all">COPY</span>
-            </button>
-
-            <!-- 3. YouTube Profile Card (Hyperlink) -->
-            <a
-              id="link-youtube"
-              href="https://www.youtube.com/@nika.nx8"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-tile flex items-center justify-between gap-2.5 p-3 rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden cursor-pointer"
-              title="Visit YouTube @nika.nx8 (opens in new tab)"
-            >
-              <div class="flex items-center gap-2.5 min-w-0">
-                <div class="tile-icon p-2 rounded-xl bg-[#15141f] border border-white/10 text-[#FF0000] transition-transform flex-shrink-0 shadow-sm">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </div>
-                <div class="min-w-0">
-                  <span class="block text-xs font-semibold text-white group-hover:text-[#FF0000] transition-colors">YouTube</span>
-                  <span class="block font-mono text-[11px] text-zinc-400 truncate">@nika.nx8</span>
-                </div>
-              </div>
-              <span class="tile-badge shrink-0 text-xs text-zinc-400 group-hover:text-[#FF0000] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">↗</span>
-            </a>
-
-            <!-- 4. Instagram Profile Card (Hyperlink) -->
-            <a
-              id="link-instagram"
-              href="https://www.instagram.com/nika.nx8/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-tile flex items-center justify-between gap-2.5 p-3 rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden cursor-pointer"
-              title="Visit Instagram @nika.nx8 (opens in new tab)"
-            >
-              <div class="flex items-center gap-2.5 min-w-0">
-                <div class="tile-icon p-2 rounded-xl bg-[#15141f] border border-white/10 text-[#E1306C] transition-transform flex-shrink-0 shadow-sm">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </div>
-                <div class="min-w-0">
-                  <span class="block text-xs font-semibold text-white group-hover:text-[#E1306C] transition-colors">Instagram</span>
-                  <span class="block font-mono text-[11px] text-zinc-400 truncate">@nika.nx8</span>
-                </div>
-              </div>
-              <span class="tile-badge shrink-0 text-xs text-zinc-400 group-hover:text-[#E1306C] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">↗</span>
-            </a>
-
-            <!-- 5. Steam Profile Card (Hyperlink) -->
-            <a
-              id="link-steam"
-              href="https://steamcommunity.com/profiles/76561199098245906/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-tile flex items-center justify-between gap-2.5 p-3 rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden cursor-pointer"
-              title="Visit Steam Profile (opens in new tab)"
-            >
-              <div class="flex items-center gap-2.5 min-w-0">
-                <div class="tile-icon p-2 rounded-xl bg-[#15141f] border border-white/10 text-[#66c0f4] transition-transform flex-shrink-0 shadow-sm">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.029 4.524 4.524s-2.03 4.524-4.524 4.524h-.105l-4.076 2.911c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.155-3.331-2.693L.261 14.887C1.554 20.017 6.321 24 11.979 24c6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
-                  </svg>
-                </div>
-                <div class="min-w-0">
-                  <span class="block text-xs font-semibold text-white group-hover:text-[#66c0f4] transition-colors">Steam</span>
-                  <span class="block font-mono text-[11px] text-zinc-400 truncate">SunGodNika</span>
-                </div>
-              </div>
-              <span class="tile-badge shrink-0 text-xs text-zinc-400 group-hover:text-[#66c0f4] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">↗</span>
-            </a>
-
-            <!-- 6. Spotify Profile Card (Hyperlink) -->
-            <a
-              id="link-spotify"
-              href="https://open.spotify.com/user/31bebpyewmgvxcovamvpsrudzaoi?si=9eb05cb78a1c43be"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-tile flex items-center justify-between gap-2.5 p-3 rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden cursor-pointer"
-              title="Visit Spotify Profile (opens in new tab)"
-            >
-              <div class="flex items-center gap-2.5 min-w-0">
-                <div class="tile-icon p-2 rounded-xl bg-[#15141f] border border-white/10 text-[#1DB954] transition-transform flex-shrink-0 shadow-sm">
-                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.48.66.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                  </svg>
-                </div>
-                <div class="min-w-0">
-                  <span class="block text-xs font-semibold text-white group-hover:text-[#1DB954] transition-colors">Spotify</span>
-                  <span class="block font-mono text-[11px] text-zinc-400 truncate">SunGodNika</span>
-                </div>
-              </div>
-              <span class="tile-badge shrink-0 text-xs text-zinc-400 group-hover:text-[#1DB954] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">↗</span>
-            </a>
-          </div>
-        </section>
-
-        <!-- 5. Profile Metadata Footer (Monospace UID Counter & Dynamic View Counter) -->
-        <footer class="pt-2 border-t border-purple-500/20 flex items-center justify-between font-mono text-xs text-purple-300/60">
-          <div class="flex items-center gap-2">
-            <span class="text-purple-400/60">UID:</span>
-            <button
-              id="btn-copy-uid"
-              title="Click to copy UID"
-              class="text-purple-300 hover:text-purple-100 transition-colors flex items-center gap-1 group"
-            >
-              <span id="uid-display">#0001</span>
-              <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-            </button>
-          </div>
-
-          <div class="flex items-center gap-2 text-purple-300/70">
-            <svg class="w-3.5 h-3.5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
-            <span id="view-counter-display" class="text-purple-300/80">1 view</span>
-          </div>
-        </footer>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-
-
-
-
-    <!-- FLOATING NEON TOAST NOTIFICATION -->
+  <!-- Top Action Bar (Background Video Audio & Volume Control) -->
+  <header class="fixed top-3 right-3 sm:top-4 sm:right-4 z-40 flex items-center">
     <div
-      id="toast"
-      class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-void-card border border-purple-400/50 text-purple-200 text-xs font-mono shadow-[0_0_20px_rgba(168,85,247,0.4)] backdrop-blur-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300"
-    >
-      <span class="text-purple-400 font-bold">⚡</span>
-      <span id="toast-message">Copied to clipboard!</span>
+      class="flex items-center gap-2 sm:gap-2.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-void-card/90 border border-white/10 text-white/90 hover:border-purple-400/50 hover:shadow-[0_0_20px_rgba(168,85,247,0.35)] transition-all backdrop-blur-xl group shadow-2xl">
+      <!-- Voice / Mute Button -->
+      <button id="btn-quick-mute" type="button" title="Toggle Mute (M)"
+        class="hover:text-purple-300 transition-colors cursor-pointer flex items-center justify-center p-0.5">
+        <svg id="icon-vol-high" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z" />
+        </svg>
+        <svg id="icon-vol-muted" class="w-4 h-4 sm:w-5 sm:h-5 hidden text-rose-400" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+        </svg>
+      </button>
+
+      <!-- Video Volume Slider -->
+      <input type="range" id="video-volume-slider" min="0" max="1" step="0.01" value="0.5"
+        class="w-14 sm:w-20 h-1 bg-white/15 rounded cursor-pointer accent-purple-400 transition-all"
+        title="Adjust Video Volume" />
+
+      <!-- Volume Percentage -->
+      <span id="video-volume-percent"
+        class="font-mono text-[10px] sm:text-[11px] text-purple-200 w-6 sm:w-7 text-right select-none">50%</span>
     </div>
+  </header>
 
-    <!-- MAIN SELF-CONTAINED APPLICATION LOGIC -->
-    <script>
-      (function () {
-        'use strict';
+  <!-- MAIN CENTRAL 3D FLIP CONTAINER -->
+  <main class="flip-scene relative z-10 w-full max-w-[580px] my-auto py-6 sm:py-8">
+    <div id="tilt-wrapper" class="tilt-wrapper">
+      <div id="flip-card-inner" class="flip-card-inner">
 
-        /* -------------------------------------------------------------
-         * 1. CONFIGURATION & STATE
-         * ----------------------------------------------------------- */
-        const DEFAULT_CONFIG = {
-          videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-clouds-and-blue-sky-2408-large.mp4',
-          videoPoster: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1920&q=80',
-          videoOpacity: 0.45,
-          audioUrl: '',
-          trackTitle: 'DRUMS OF LIBERATION // OVERDRIVE',
-          trackArtist: 'Sun God Nika x Neon Phonk',
-          trackCover: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=200&q=80',
-          initialVolume: 0.5,
-          displayName: 'SunGodNika',
-          subtitle: 'Joyboy // Fast As Lightning',
-          bio: 'Radiant duelist laughing into the void. Surging through the frontline with electric overdrive. Drums of liberation beating at 180 BPM. ⚡🥁',
-          avatarUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80',
-          discordId: '717682700785549393',
-          discordTag: 'nika.nx8',
-        };
+        <!-- FRONT FACE: Luffy Anime Artwork Poster + Top-to-Bottom Glow Wipe -->
+        <div id="card-front-face"
+          class="flip-card-face flip-card-front rounded-[24px] sm:rounded-[32px] overflow-hidden glass-card glass-border-anim border border-purple-500/40 shadow-[0_0_50px_rgba(168,85,247,0.35)] cursor-pointer select-none group">
+          <div
+            class="relative w-full h-full flex flex-col justify-between p-4 sm:p-6 md:p-8 overflow-hidden bg-[#07050d]">
+            <!-- Anime Background Artwork -->
+            <img src="/card-front.jpg" alt="Sun God Nika / Luffy Poster"
+              class="absolute inset-0 w-full h-full object-cover object-top filter brightness-[0.96] contrast-110 transition-transform duration-700 group-hover:scale-105" />
 
-        // Merge site config from config.js (window.SITE_CONFIG) if available
-        const config = Object.assign({}, DEFAULT_CONFIG, window.SITE_CONFIG || {});
-        let currentVolume = 0.5;
-        try {
-          const storedVol = localStorage.getItem('sungodnika_video_vol');
-          if (storedVol !== null && !isNaN(parseFloat(storedVol)) && storedVol !== '0.8') {
-            currentVolume = parseFloat(storedVol);
-          } else if (typeof config.initialVolume === 'number') {
-            currentVolume = config.initialVolume;
-          }
-          localStorage.setItem('sungodnika_video_vol', currentVolume.toString());
-        } catch (_) {
-          currentVolume = 0.5;
+            <!-- Atmospheric Vignettes & Overlays -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#06060c] via-transparent to-[#06060c]/60 pointer-events-none">
+            </div>
+            <div class="absolute inset-0 bg-purple-950/20 mix-blend-color pointer-events-none"></div>
+            <div
+              class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[24px] sm:rounded-[32px] pointer-events-none">
+            </div>
+
+            <!-- TOP-TO-BOTTOM GLOW WIPING LASER BEAM -->
+            <div class="glow-wipe-scanner pointer-events-none">
+              <div class="glow-wipe-ambient"></div>
+              <div class="glow-wipe-core"></div>
+            </div>
+
+            <!-- Top Floating Badges -->
+            <div class="relative z-10 flex items-center justify-between w-full">
+              <div
+                class="flex items-center gap-1.5 sm:gap-2 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-black/65 border border-purple-400/40 backdrop-blur-md shadow-lg">
+                <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-purple-400 animate-ping"></span>
+                <span
+                  class="font-mono text-[10px] sm:text-[11px] font-bold tracking-widest text-purple-200 uppercase">JOYBOY
+                  //
+                  NIKA</span>
+              </div>
+            </div>
+
+            <!-- Bottom Interactive Prompt -->
+            <div class="relative z-10 flex flex-col items-center text-center gap-2 pt-16">
+              <div
+                class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-black/80 border border-purple-400/60 backdrop-blur-xl shadow-[0_0_30px_rgba(168,85,247,0.5)] flex items-center gap-2 group-hover:border-cyan-400 group-hover:shadow-[0_0_30px_rgba(0,242,254,0.5)] transition-all">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-300 animate-spin-slow" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                <span
+                  class="font-syne font-bold text-[11px] sm:text-xs md:text-sm tracking-wider sm:tracking-widest text-white uppercase glow-text-cyan">
+                  [ CLICK TO REVEAL PROFILE ]
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BACK FACE: Live Discord Statistics & Profile Card -->
+        <div id="card-back-face" class="flip-card-face flip-card-back w-full">
+          <div id="profile-card"
+            class="glass-card glass-border-anim rounded-[24px] sm:rounded-[32px] p-3.5 sm:p-6 md:p-8 flex flex-col gap-4 sm:gap-6 relative overflow-hidden">
+            <!-- Flip back quick button on top left of back face -->
+            <button id="btn-flip-back" type="button" title="Flip back to front poster"
+              class="absolute top-3 left-3 sm:top-4 sm:left-4 z-30 flex items-center gap-1 sm:gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-purple-950/70 hover:bg-purple-900 border border-purple-500/40 hover:border-purple-400 backdrop-blur-md text-purple-200 hover:text-white font-mono text-[10px] sm:text-[11px] font-semibold transition-all cursor-pointer shadow-md select-none pointer-events-auto">
+              <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-purple-300" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              <span>FLIP BACK</span>
+            </button>
+
+            <!-- Subtle Top Ambient Glow Arc -->
+            <div
+              class="absolute -top-12 left-1/2 -translate-x-1/2 w-72 h-20 bg-gradient-to-b from-purple-500/10 via-fuchsia-500/05 to-transparent blur-2xl pointer-events-none">
+            </div>
+
+            <!-- 1. Header Section: Avatar, Pulse Status, Name & Badges -->
+            <div class="flex flex-col items-center text-center relative z-10 pt-2">
+              <!-- Avatar Frame with Live Pulsing Status Ring -->
+              <div class="relative group mb-3 sm:mb-4">
+                <!-- Pulsing outer aura ring -->
+                <div id="avatar-halo"
+                  class="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-purple-500 via-fuchsia-500 to-indigo-500 opacity-75 blur-md group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow">
+                </div>
+
+                <!-- Avatar Frame Container with Decoration & Status -->
+                <div class="relative w-24 h-24 min-[400px]:w-28 min-[400px]:h-28 sm:w-32 sm:h-32 mx-auto">
+                  <!-- Rounded avatar image with overflow hidden -->
+                  <div
+                    class="w-full h-full rounded-full overflow-hidden border-2 border-purple-400/30 bg-zinc-900/90 shadow-2xl relative">
+                    <img id="profile-avatar"
+                      src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80"
+                      alt="Profile Avatar"
+                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="eager" />
+                  </div>
+
+                  <!-- Live Discord Avatar Decoration (layered on top, unclipped) -->
+                  <div id="avatar-decoration-wrap"
+                    class="absolute -inset-[14%] pointer-events-none z-20 hidden items-center justify-center">
+                    <img id="avatar-decoration-img" src="" alt=""
+                      class="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]" />
+                  </div>
+
+                  <!-- Live Discord Status Indicator Badge -->
+                  <div id="status-indicator-badge" title="Discord Status"
+                    class="absolute bottom-0 right-0 w-6 h-6 min-[400px]:w-7 min-[400px]:h-7 sm:w-8 sm:h-8 rounded-full bg-[#0d0d16] p-0.5 border-2 border-[#0d0d16] z-30 transition-transform duration-200 group-hover:scale-110 flex items-center justify-center shadow-[0_0_12px_#10b981]">
+                    <div id="status-icon-inner" class="w-full h-full flex items-center justify-center">
+                      <svg class="w-full h-full" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" fill="#23a55a" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Handle & Custom Gradient Headline -->
+              <h1 id="profile-name"
+                class="font-syne font-extrabold text-2xl min-[360px]:text-3xl sm:text-4xl tracking-tight glow-purple-gradient hover:brightness-110 transition-all cursor-default break-words">
+                SunGodNika
+              </h1>
+
+              <!-- Live Discord Identity Badges: nika.nx8 [CODE] 💎 -->
+              <div class="flex items-center justify-center gap-1.5 sm:gap-2 mt-1.5 select-none flex-wrap">
+                <span id="discord-username-display"
+                  class="font-sans font-bold text-xs sm:text-base text-[#ff6224] tracking-tight">nika.nx8</span>
+
+                <!-- Clan Tag Pill [🔥 CODE] -->
+                <div id="presence-clan-badge"
+                  class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-black/45 border border-[#ff6224]/35 backdrop-blur-sm select-none">
+                  <img id="presence-clan-icon"
+                    src="https://cdn.discordapp.com/clan-badges/547906569489350657/3858554c542da4e8e4b52ff00a558ced.png"
+                    alt="CODE" class="w-3 h-3 sm:w-3.5 sm:h-3.5 object-contain" />
+                  <span id="presence-clan-tag"
+                    class="font-mono font-bold text-[10px] sm:text-[11px] text-[#ff6224] leading-none">CODE</span>
+                </div>
+
+                <!-- Discord Nitro Booster Purple Diamond Badge -->
+                <span id="presence-booster-badge" title="Nitro Server Booster"
+                  class="inline-flex items-center text-[#c084fc] flex-shrink-0 select-none">
+                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.5L5 9.5L12 21.5L19 9.5L12 2.5ZM12 7.5L15 10.5L12 16.5L9 10.5L12 7.5Z" />
+                  </svg>
+                </span>
+              </div>
+
+              <!-- Dynamic Subtitle -->
+              <p id="profile-subtitle"
+                class="font-mono text-[11px] min-[360px]:text-xs sm:text-sm text-purple-300/90 tracking-wider sm:tracking-widest uppercase mt-2 flex items-center justify-center gap-1.5 sm:gap-2">
+                <span class="inline-block w-2 h-0.5 bg-purple-400"></span>
+                <span>Joyboy // Fast As Lightning</span>
+                <span class="inline-block w-2 h-0.5 bg-purple-400"></span>
+              </p>
+
+              <!-- Bio Description -->
+              <p id="profile-bio"
+                class="text-xs min-[360px]:text-sm sm:text-base text-purple-100/85 max-w-md mx-auto mt-2.5 sm:mt-3 leading-relaxed font-light">
+                as long as i live , i have infinite chances...
+              </p>
+            </div>
+
+            <!-- 2. LIVE DISCORD ACTIVITIES SECTION (Matching Discord Native Multi-Activity UI 1:1) -->
+            <section class="flex flex-col gap-2 w-full text-left">
+              <div class="flex items-center justify-between px-1">
+                <span class="font-sans text-[11px] sm:text-[12px] font-bold text-zinc-400 tracking-wide select-none">
+                  Current activity
+                </span>
+                <div id="lanyard-sync-indicator"
+                  class="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono text-emerald-400/80">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>LIVE</span>
+                </div>
+              </div>
+
+              <!-- Dynamic Activities Container (Stacks multiple activities: VS Code, Spotify, Games, etc.) -->
+              <div id="discord-activities-container" class="flex flex-col gap-2.5 w-full">
+                <div
+                  class="rounded-[18px] sm:rounded-[20px] bg-[#1a1728]/85 border border-purple-500/25 p-3 sm:p-4 relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md">
+                  <div class="flex items-center gap-3 sm:gap-3.5">
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl overflow-hidden bg-[#15141f] border border-white/10 flex items-center justify-center text-[#5865F2] flex-shrink-0">
+                      <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current animate-pulse" viewBox="0 0 24 24">
+                        <path
+                          d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.894.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                      </svg>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <h4 class="font-bold text-white text-[14px] sm:text-base leading-snug truncate">Connecting to
+                        Discord...</h4>
+                      <p class="text-[11px] sm:text-xs text-purple-300/80 font-mono mt-0.5">Syncing with live Lanyard socket...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 4. CONNECTED PROFILES GRID (Symmetric Responsive Layout) -->
+            <section class="flex flex-col gap-2">
+              <div class="flex items-center justify-between px-1">
+                <span class="font-mono text-[11px] sm:text-xs text-purple-300/90 tracking-wider uppercase">
+                  CONNECTED FREQUENCIES
+                </span>
+                <span class="font-mono text-[10px] sm:text-[11px] text-purple-400/70 uppercase">Profiles</span>
+              </div>
+
+              <div id="social-tiles-container" class="social-tiles-container grid grid-cols-1 min-[340px]:grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-2.5">
+                <!-- 1. Discord Profile Card (Copy Action) -->
+                <button id="btn-social-discord" type="button" title="Click to copy Discord ID"
+                  class="social-tile flex items-center justify-between gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group text-left relative overflow-hidden select-none cursor-pointer">
+                  <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                    <div
+                      class="tile-icon p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-[#15141f] border border-white/10 text-[#5865F2] transition-transform flex-shrink-0 shadow-sm">
+                      <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.894.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.028z" />
+                      </svg>
+                    </div>
+                    <div class="min-w-0">
+                      <span
+                        class="block text-[11px] sm:text-xs font-semibold text-white group-hover:text-[#8da2ff] transition-colors truncate">Discord</span>
+                      <span id="social-discord-val"
+                        class="block font-mono text-[10px] sm:text-[11px] text-zinc-400 truncate">nika.nx8</span>
+                    </div>
+                  </div>
+                  <span id="badge-discord"
+                    class="tile-badge shrink-0 text-[8px] sm:text-[9px] font-mono font-bold uppercase tracking-wider px-1 sm:px-1.5 py-0.5 rounded bg-[#15141f] text-zinc-300 border border-white/10 group-hover:border-[#5865F2] group-hover:text-white transition-all">COPY</span>
+                </button>
+
+                <!-- 2. Valorant Profile Card (Copy Action) -->
+                <button id="btn-social-valorant" type="button" title="Click to copy Valorant ID"
+                  class="social-tile flex items-center justify-between gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden select-none text-left cursor-pointer">
+                  <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                    <div
+                      class="tile-icon p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-[#15141f] border border-white/10 text-[#FF4655] transition-transform flex-shrink-0 shadow-sm">
+                      <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 100 100">
+                        <path d="M99.25 19.5L62.75 80.5H37.25L0.75 19.5H23.5L50 63.75L76.5 19.5H99.25Z" />
+                      </svg>
+                    </div>
+                    <div class="min-w-0">
+                      <span
+                        class="block text-[11px] sm:text-xs font-semibold text-white group-hover:text-[#FF4655] transition-colors truncate">Valorant</span>
+                      <span id="social-valorant-val" class="block font-mono text-[10px] sm:text-[11px] text-zinc-400 truncate"
+                        title="SunGodNikaカ#Edits">SunGodNikaカ#Edits</span>
+                    </div>
+                  </div>
+                  <span id="badge-valorant"
+                    class="tile-badge shrink-0 text-[8px] sm:text-[9px] font-mono font-bold uppercase tracking-wider px-1 sm:px-1.5 py-0.5 rounded bg-[#15141f] text-zinc-300 border border-white/10 group-hover:border-[#FF4655] group-hover:text-white transition-all">COPY</span>
+                </button>
+
+                <!-- 3. YouTube Profile Card (Hyperlink) -->
+                <a id="link-youtube" href="https://www.youtube.com/@nika.nx8" target="_blank" rel="noopener noreferrer"
+                  class="social-tile flex items-center justify-between gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden cursor-pointer"
+                  title="Visit YouTube @nika.nx8 (opens in new tab)">
+                  <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                    <div
+                      class="tile-icon p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-[#15141f] border border-white/10 text-[#FF0000] transition-transform flex-shrink-0 shadow-sm">
+                      <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                      </svg>
+                    </div>
+                    <div class="min-w-0">
+                      <span
+                        class="block text-[11px] sm:text-xs font-semibold text-white group-hover:text-[#FF0000] transition-colors truncate">YouTube</span>
+                      <span class="block font-mono text-[10px] sm:text-[11px] text-zinc-400 truncate">@nika.nx8</span>
+                    </div>
+                  </div>
+                  <span
+                    class="tile-badge shrink-0 text-[10px] sm:text-xs text-zinc-400 group-hover:text-[#FF0000] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">↗</span>
+                </a>
+
+                <!-- 4. Instagram Profile Card (Hyperlink) -->
+                <a id="link-instagram" href="https://www.instagram.com/nika.nx8/" target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-tile flex items-center justify-between gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden cursor-pointer"
+                  title="Visit Instagram @nika.nx8 (opens in new tab)">
+                  <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                    <div
+                      class="tile-icon p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-[#15141f] border border-white/10 text-[#E1306C] transition-transform flex-shrink-0 shadow-sm">
+                      <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                      </svg>
+                    </div>
+                    <div class="min-w-0">
+                      <span
+                        class="block text-[11px] sm:text-xs font-semibold text-white group-hover:text-[#E1306C] transition-colors truncate">Instagram</span>
+                      <span class="block font-mono text-[10px] sm:text-[11px] text-zinc-400 truncate">@nika.nx8</span>
+                    </div>
+                  </div>
+                  <span
+                    class="tile-badge shrink-0 text-[10px] sm:text-xs text-zinc-400 group-hover:text-[#E1306C] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">↗</span>
+                </a>
+
+                <!-- 5. Steam Profile Card (Hyperlink) -->
+                <a id="link-steam" href="https://steamcommunity.com/profiles/76561199098245906/" target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-tile flex items-center justify-between gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden cursor-pointer"
+                  title="Visit Steam Profile (opens in new tab)">
+                  <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                    <div
+                      class="tile-icon p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-[#15141f] border border-white/10 text-[#66c0f4] transition-transform flex-shrink-0 shadow-sm">
+                      <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.029 4.524 4.524s-2.03 4.524-4.524 4.524h-.105l-4.076 2.911c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.155-3.331-2.693L.261 14.887C1.554 20.017 6.321 24 11.979 24c6.627 0 12-5.373 12-12s-5.373-12-12-12z" />
+                      </svg>
+                    </div>
+                    <div class="min-w-0">
+                      <span
+                        class="block text-[11px] sm:text-xs font-semibold text-white group-hover:text-[#66c0f4] transition-colors truncate">Steam</span>
+                      <span class="block font-mono text-[10px] sm:text-[11px] text-zinc-400 truncate">SunGodNika</span>
+                    </div>
+                  </div>
+                  <span
+                    class="tile-badge shrink-0 text-[10px] sm:text-xs text-zinc-400 group-hover:text-[#66c0f4] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">↗</span>
+                </a>
+
+                <!-- 6. Spotify Profile Card (Hyperlink) -->
+                <a id="link-spotify"
+                  href="https://open.spotify.com/user/31bebpyewmgvxcovamvpsrudzaoi?si=9eb05cb78a1c43be" target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-tile flex items-center justify-between gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-[#1a1728]/85 border border-purple-500/25 shadow-[0_8px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all group relative overflow-hidden cursor-pointer"
+                  title="Visit Spotify Profile (opens in new tab)">
+                  <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                    <div
+                      class="tile-icon p-1.5 sm:p-2 rounded-lg sm:rounded-xl bg-[#15141f] border border-white/10 text-[#1DB954] transition-transform flex-shrink-0 shadow-sm">
+                      <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                          d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.48.66.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+                      </svg>
+                    </div>
+                    <div class="min-w-0">
+                      <span
+                        class="block text-[11px] sm:text-xs font-semibold text-white group-hover:text-[#1DB954] transition-colors truncate">Spotify</span>
+                      <span class="block font-mono text-[10px] sm:text-[11px] text-zinc-400 truncate">SunGodNika</span>
+                    </div>
+                  </div>
+                  <span
+                    class="tile-badge shrink-0 text-[10px] sm:text-xs text-zinc-400 group-hover:text-[#1DB954] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">↗</span>
+                </a>
+              </div>
+            </section>
+
+            <!-- 5. Profile Metadata Footer (Monospace UID Counter & Dynamic View Counter) -->
+            <footer
+              class="pt-2 border-t border-purple-500/20 flex items-center justify-between font-mono text-[10px] sm:text-xs text-purple-300/60 flex-wrap gap-2">
+              <div class="flex items-center gap-1.5 sm:gap-2">
+                <span class="text-purple-400/60">UID:</span>
+                <button id="btn-copy-uid" title="Click to copy UID"
+                  class="text-purple-300 hover:text-purple-100 transition-colors flex items-center gap-1 group">
+                  <span id="uid-display">#0001</span>
+                  <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 opacity-60 group-hover:opacity-100" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="flex items-center gap-1.5 sm:gap-2 text-purple-300/70">
+                <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <span id="view-counter-display" class="text-purple-300/80">1 view</span>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+  <!-- FLOATING NEON TOAST NOTIFICATION -->
+  <div id="toast"
+    class="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 sm:gap-2.5 px-3 py-1.5 sm:px-4 sm:py-2.5 max-w-[90vw] sm:max-w-md rounded-full bg-void-card border border-purple-400/50 text-purple-200 text-[11px] sm:text-xs font-mono shadow-[0_0_20px_rgba(168,85,247,0.4)] backdrop-blur-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
+    <span class="text-purple-400 font-bold">⚡</span>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- MAIN SELF-CONTAINED APPLICATION LOGIC -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* -------------------------------------------------------------
+       * 1. CONFIGURATION & STATE
+       * ----------------------------------------------------------- */
+      const DEFAULT_CONFIG = {
+        videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-clouds-and-blue-sky-2408-large.mp4',
+        videoPoster: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1920&q=80',
+        videoOpacity: 0.45,
+        audioUrl: '',
+        trackTitle: 'DRUMS OF LIBERATION // OVERDRIVE',
+        trackArtist: 'Sun God Nika x Neon Phonk',
+        trackCover: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=200&q=80',
+        initialVolume: 0.5,
+        displayName: 'SunGodNika',
+        subtitle: 'Joyboy // Fast As Lightning',
+        bio: 'Radiant duelist laughing into the void. Surging through the frontline with electric overdrive. Drums of liberation beating at 180 BPM. ⚡🥁',
+        avatarUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80',
+        discordId: '717682700785549393',
+        discordTag: 'nika.nx8',
+      };
+
+      // Merge site config from config.js (window.SITE_CONFIG) if available
+      const config = Object.assign({}, DEFAULT_CONFIG, window.SITE_CONFIG || {});
+      let currentVolume = 0.5;
+      try {
+        const storedVol = localStorage.getItem('sungodnika_video_vol');
+        if (storedVol !== null && !isNaN(parseFloat(storedVol)) && storedVol !== '0.8') {
+          currentVolume = parseFloat(storedVol);
+        } else if (typeof config.initialVolume === 'number') {
+          currentVolume = config.initialVolume;
+        }
+        localStorage.setItem('sungodnika_video_vol', currentVolume.toString());
+      } catch (_) {
+        currentVolume = 0.5;
+      }
+
+      // Automatically normalizes asset paths (supports local Windows paths, relative paths, and URLs)
+      function normalizeAssetUrl(url) {
+        if (!url || typeof url !== 'string') return '';
+        let trimmed = url.trim();
+        // If Windows backslashes are present or contains "public"
+        const publicIdx = trimmed.search(/[\\/]public[\\/]/i);
+        if (publicIdx !== -1) {
+          const rel = trimmed.substring(publicIdx + 8).replace(/\\/g, '/');
+          return '/' + encodeURI(rel);
+        }
+        // If Windows absolute drive path (e.g. D:\path\file.ext)
+        if (/^[a-zA-Z]:[\\/]/.test(trimmed)) {
+          const parts = trimmed.split(/[\\/]/);
+          const fileName = parts.pop();
+          return '/' + encodeURI(fileName);
+        }
+        // If it doesn't start with http, https, or /, make sure it starts with /
+        if (!trimmed.startsWith('http://') && !trimmed.startsWith('https://') && !trimmed.startsWith('/')) {
+          return '/' + encodeURI(trimmed);
+        }
+        return trimmed;
+      }
+
+      // Profile view counter: base value is 0, increments on each page visit
+      let viewCount = 1;
+      try {
+        const storedViews = localStorage.getItem('sungodnika_view_count');
+        let prev = storedViews !== null ? parseInt(storedViews, 10) : 0;
+        if (isNaN(prev) || prev >= 40000) {
+          prev = 0;
+        }
+        viewCount = prev + 1;
+        localStorage.setItem('sungodnika_view_count', viewCount.toString());
+      } catch (_) {
+        viewCount = 1;
+      }
+
+      function applyConfigToDOM() {
+        const nameEl = document.getElementById('profile-name');
+        if (nameEl) nameEl.textContent = config.displayName;
+
+        const subEl = document.getElementById('profile-subtitle');
+        if (subEl) {
+          const subSpan = subEl.querySelector('span:nth-child(2)');
+          if (subSpan) subSpan.textContent = config.subtitle;
         }
 
-        // Automatically normalizes asset paths (supports local Windows paths, relative paths, and URLs)
-        function normalizeAssetUrl(url) {
-          if (!url || typeof url !== 'string') return '';
-          let trimmed = url.trim();
-          // If Windows backslashes are present or contains "public"
-          const publicIdx = trimmed.search(/[\\/]public[\\/]/i);
-          if (publicIdx !== -1) {
-            const rel = trimmed.substring(publicIdx + 8).replace(/\\/g, '/');
-            return '/' + encodeURI(rel);
+        const bioEl = document.getElementById('profile-bio');
+        if (bioEl) bioEl.textContent = config.bio;
+
+        const avatarEl = document.getElementById('profile-avatar');
+        if (avatarEl && config.avatarUrl) avatarEl.src = config.avatarUrl;
+
+        const trackTitleEl = document.getElementById('track-title');
+        if (trackTitleEl) trackTitleEl.textContent = config.trackTitle;
+
+        const trackArtistEl = document.getElementById('track-artist');
+        if (trackArtistEl) trackArtistEl.textContent = config.trackArtist;
+
+        const trackCoverEl = document.getElementById('audio-cover-art');
+        if (trackCoverEl && config.trackCover) trackCoverEl.src = config.trackCover;
+
+        const viewsEl = document.getElementById('view-counter-display');
+        if (viewsEl) viewsEl.textContent = `${viewCount.toLocaleString()} ${viewCount === 1 ? 'view' : 'views'}`;
+
+        const videoEl = document.getElementById('bg-video');
+        if (videoEl) {
+          if (config.videoPoster) videoEl.poster = config.videoPoster;
+          if (config.videoOpacity !== undefined) videoEl.style.opacity = config.videoOpacity;
+          const targetVideo = normalizeAssetUrl(config.videoUrl);
+          if (targetVideo) {
+            const currentSrc = videoEl.currentSrc || videoEl.src;
+            if (!currentSrc || !currentSrc.includes(targetVideo)) {
+              videoEl.src = targetVideo;
+              videoEl.load();
+              videoEl.play().catch(() => { });
+            }
           }
-          // If Windows absolute drive path (e.g. D:\path\file.ext)
-          if (/^[a-zA-Z]:[\\/]/.test(trimmed)) {
-            const parts = trimmed.split(/[\\/]/);
-            const fileName = parts.pop();
-            return '/' + encodeURI(fileName);
-          }
-          // If it doesn't start with http, https, or /, make sure it starts with /
-          if (!trimmed.startsWith('http://') && !trimmed.startsWith('https://') && !trimmed.startsWith('/')) {
-            return '/' + encodeURI(trimmed);
-          }
-          return trimmed;
         }
 
-        // Profile view counter: base value is 0, increments on each page visit
-        let viewCount = 1;
-        try {
-          const storedViews = localStorage.getItem('sungodnika_view_count');
-          let prev = storedViews !== null ? parseInt(storedViews, 10) : 0;
-          if (isNaN(prev) || prev >= 40000) {
-            prev = 0;
+        if (config.socials) {
+          const ytLink = document.getElementById('link-youtube');
+          if (ytLink && config.socials.youtube) ytLink.href = config.socials.youtube;
+
+          const instaLink = document.getElementById('link-instagram');
+          if (instaLink && config.socials.instagram) instaLink.href = config.socials.instagram;
+
+          const steamLink = document.getElementById('link-steam');
+          if (steamLink && config.socials.steam) steamLink.href = config.socials.steam;
+
+          const spotifyLink = document.getElementById('link-spotify');
+          if (spotifyLink && config.socials.spotify) spotifyLink.href = config.socials.spotify;
+
+          const valSpan = document.getElementById('social-valorant-val');
+          if (valSpan && config.socials.valorant) valSpan.textContent = config.socials.valorant;
+
+          const discSpan = document.getElementById('social-discord-val');
+          if (discSpan && (config.discordTag || config.socials.discord)) {
+            discSpan.textContent = config.discordTag || config.socials.discord;
           }
-          viewCount = prev + 1;
-          localStorage.setItem('sungodnika_view_count', viewCount.toString());
-        } catch (_) {
-          viewCount = 1;
+        }
+      }
+
+      /* -------------------------------------------------------------
+       * 2. TOAST NOTIFICATION HELPER
+       * ----------------------------------------------------------- */
+      let toastTimeout = null;
+      function showToast(msg) {
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-message');
+        toastMsg.textContent = msg;
+
+        toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        toast.classList.add('opacity-100', 'translate-y-0');
+
+        if (toastTimeout) clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        }, 2400);
+      }
+
+      /* -------------------------------------------------------------
+       * 3. ANTIGRAVITY PARTICLES SYSTEM (Canvas Physics Engine)
+       * ----------------------------------------------------------- */
+      const canvas = document.getElementById('particle-canvas');
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      const particles = [];
+      const PARTICLE_COUNT = Math.min(80, Math.floor((width * height) / 14000));
+      let mouseX = width / 2;
+      let mouseY = height / 2;
+      let isMouseOver = false;
+
+      class Particle {
+        constructor() {
+          this.reset(true);
         }
 
-        function applyConfigToDOM() {
-          const nameEl = document.getElementById('profile-name');
-          if (nameEl) nameEl.textContent = config.displayName;
+        reset(initial = false) {
+          this.x = Math.random() * width;
+          this.y = initial ? Math.random() * height : height + 10 + Math.random() * 20;
+          // Dual theme: Gold ember or Cyan spark
+          this.isGold = Math.random() > 0.45;
+          this.size = this.isGold ? Math.random() * 2.8 + 1.2 : Math.random() * 2.2 + 0.8;
+          this.baseSpeedY = (Math.random() * 0.9 + 0.35) * -1; // float upward
+          this.vx = (Math.random() - 0.5) * 0.5;
+          this.vy = this.baseSpeedY;
+          this.alpha = Math.random() * 0.6 + 0.25;
+          this.pulseSpeed = Math.random() * 0.03 + 0.01;
+          this.angle = Math.random() * Math.PI * 2;
+          this.jitter = !this.isGold; // Cyan lightning motes jitter slightly
+        }
 
-          const subEl = document.getElementById('profile-subtitle');
-          if (subEl) {
-            const subSpan = subEl.querySelector('span:nth-child(2)');
-            if (subSpan) subSpan.textContent = config.subtitle;
+        update() {
+          this.angle += 0.02;
+          this.x += this.vx + Math.sin(this.angle) * 0.4;
+          this.y += this.vy;
+
+          if (this.jitter && Math.random() > 0.8) {
+            this.vx += (Math.random() - 0.5) * 0.6;
+            this.vx *= 0.85;
           }
 
-          const bioEl = document.getElementById('profile-bio');
-          if (bioEl) bioEl.textContent = config.bio;
-
-          const avatarEl = document.getElementById('profile-avatar');
-          if (avatarEl && config.avatarUrl) avatarEl.src = config.avatarUrl;
-
-          const trackTitleEl = document.getElementById('track-title');
-          if (trackTitleEl) trackTitleEl.textContent = config.trackTitle;
-
-          const trackArtistEl = document.getElementById('track-artist');
-          if (trackArtistEl) trackArtistEl.textContent = config.trackArtist;
-
-          const trackCoverEl = document.getElementById('audio-cover-art');
-          if (trackCoverEl && config.trackCover) trackCoverEl.src = config.trackCover;
-
-          const viewsEl = document.getElementById('view-counter-display');
-          if (viewsEl) viewsEl.textContent = `${viewCount.toLocaleString()} ${viewCount === 1 ? 'view' : 'views'}`;
-
-          const videoEl = document.getElementById('bg-video');
-          if (videoEl) {
-            if (config.videoPoster) videoEl.poster = config.videoPoster;
-            if (config.videoOpacity !== undefined) videoEl.style.opacity = config.videoOpacity;
-            const targetVideo = normalizeAssetUrl(config.videoUrl);
-            if (targetVideo) {
-              const currentSrc = videoEl.currentSrc || videoEl.src;
-              if (!currentSrc || !currentSrc.includes(targetVideo)) {
-                videoEl.src = targetVideo;
-                videoEl.load();
-                videoEl.play().catch(() => {});
-              }
+          // Mouse repulsion physics
+          if (isMouseOver) {
+            const dx = this.x - mouseX;
+            const dy = this.y - mouseY;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const maxDist = 130;
+            if (dist < maxDist && dist > 0) {
+              const force = (1 - dist / maxDist) * 3.5;
+              this.x += (dx / dist) * force;
+              this.y += (dy / dist) * force;
             }
           }
 
-          if (config.socials) {
-            const ytLink = document.getElementById('link-youtube');
-            if (ytLink && config.socials.youtube) ytLink.href = config.socials.youtube;
-
-            const instaLink = document.getElementById('link-instagram');
-            if (instaLink && config.socials.instagram) instaLink.href = config.socials.instagram;
-
-            const steamLink = document.getElementById('link-steam');
-            if (steamLink && config.socials.steam) steamLink.href = config.socials.steam;
-
-            const spotifyLink = document.getElementById('link-spotify');
-            if (spotifyLink && config.socials.spotify) spotifyLink.href = config.socials.spotify;
-
-            const valSpan = document.getElementById('social-valorant-val');
-            if (valSpan && config.socials.valorant) valSpan.textContent = config.socials.valorant;
-
-            const discSpan = document.getElementById('social-discord-val');
-            if (discSpan && (config.discordTag || config.socials.discord)) {
-              discSpan.textContent = config.discordTag || config.socials.discord;
-            }
+          // Reset when reaching top
+          if (this.y < -20 || this.x < -20 || this.x > width + 20) {
+            this.reset();
           }
         }
 
-        /* -------------------------------------------------------------
-         * 2. TOAST NOTIFICATION HELPER
-         * ----------------------------------------------------------- */
-        let toastTimeout = null;
-        function showToast(msg) {
-          const toast = document.getElementById('toast');
-          const toastMsg = document.getElementById('toast-message');
-          toastMsg.textContent = msg;
+        draw() {
+          ctx.save();
+          ctx.globalAlpha = Math.max(0.1, Math.min(1, this.alpha + Math.sin(this.angle) * 0.2));
 
-          toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
-          toast.classList.add('opacity-100', 'translate-y-0');
-
-          if (toastTimeout) clearTimeout(toastTimeout);
-          toastTimeout = setTimeout(() => {
-            toast.classList.remove('opacity-100', 'translate-y-0');
-            toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
-          }, 2400);
+          if (this.isGold) {
+            // Solar Gold Ember
+            ctx.shadowBlur = 12;
+            ctx.shadowColor = '#fbbf24';
+            ctx.fillStyle = '#fbbf24';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+          } else {
+            // Electric Purple Spark
+            ctx.shadowBlur = 12;
+            ctx.shadowColor = '#c084fc';
+            ctx.fillStyle = '#a855f7';
+            // Draw electric diamond/spark
+            ctx.beginPath();
+            ctx.moveTo(this.x, this.y - this.size * 1.5);
+            ctx.lineTo(this.x + this.size, this.y);
+            ctx.lineTo(this.x, this.y + this.size * 1.5);
+            ctx.lineTo(this.x - this.size, this.y);
+            ctx.closePath();
+            ctx.fill();
+          }
+          ctx.restore();
         }
+      }
 
-        /* -------------------------------------------------------------
-         * 3. ANTIGRAVITY PARTICLES SYSTEM (Canvas Physics Engine)
-         * ----------------------------------------------------------- */
-        const canvas = document.getElementById('particle-canvas');
-        const ctx = canvas.getContext('2d');
-        let width = (canvas.width = window.innerWidth);
-        let height = (canvas.height = window.innerHeight);
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(new Particle());
+      }
 
-        const particles = [];
-        const PARTICLE_COUNT = Math.min(80, Math.floor((width * height) / 14000));
-        let mouseX = width / 2;
-        let mouseY = height / 2;
-        let isMouseOver = false;
-
-        class Particle {
-          constructor() {
-            this.reset(true);
-          }
-
-          reset(initial = false) {
-            this.x = Math.random() * width;
-            this.y = initial ? Math.random() * height : height + 10 + Math.random() * 20;
-            // Dual theme: Gold ember or Cyan spark
-            this.isGold = Math.random() > 0.45;
-            this.size = this.isGold ? Math.random() * 2.8 + 1.2 : Math.random() * 2.2 + 0.8;
-            this.baseSpeedY = (Math.random() * 0.9 + 0.35) * -1; // float upward
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = this.baseSpeedY;
-            this.alpha = Math.random() * 0.6 + 0.25;
-            this.pulseSpeed = Math.random() * 0.03 + 0.01;
-            this.angle = Math.random() * Math.PI * 2;
-            this.jitter = !this.isGold; // Cyan lightning motes jitter slightly
-          }
-
-          update() {
-            this.angle += 0.02;
-            this.x += this.vx + Math.sin(this.angle) * 0.4;
-            this.y += this.vy;
-
-            if (this.jitter && Math.random() > 0.8) {
-              this.vx += (Math.random() - 0.5) * 0.6;
-              this.vx *= 0.85;
-            }
-
-            // Mouse repulsion physics
-            if (isMouseOver) {
-              const dx = this.x - mouseX;
-              const dy = this.y - mouseY;
-              const dist = Math.sqrt(dx * dx + dy * dy);
-              const maxDist = 130;
-              if (dist < maxDist && dist > 0) {
-                const force = (1 - dist / maxDist) * 3.5;
-                this.x += (dx / dist) * force;
-                this.y += (dy / dist) * force;
-              }
-            }
-
-            // Reset when reaching top
-            if (this.y < -20 || this.x < -20 || this.x > width + 20) {
-              this.reset();
-            }
-          }
-
-          draw() {
-            ctx.save();
-            ctx.globalAlpha = Math.max(0.1, Math.min(1, this.alpha + Math.sin(this.angle) * 0.2));
-
-            if (this.isGold) {
-              // Solar Gold Ember
-              ctx.shadowBlur = 12;
-              ctx.shadowColor = '#fbbf24';
-              ctx.fillStyle = '#fbbf24';
-              ctx.beginPath();
-              ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-              ctx.fill();
-            } else {
-              // Electric Purple Spark
-              ctx.shadowBlur = 12;
-              ctx.shadowColor = '#c084fc';
-              ctx.fillStyle = '#a855f7';
-              // Draw electric diamond/spark
-              ctx.beginPath();
-              ctx.moveTo(this.x, this.y - this.size * 1.5);
-              ctx.lineTo(this.x + this.size, this.y);
-              ctx.lineTo(this.x, this.y + this.size * 1.5);
-              ctx.lineTo(this.x - this.size, this.y);
-              ctx.closePath();
-              ctx.fill();
-            }
-            ctx.restore();
-          }
-        }
-
-        for (let i = 0; i < PARTICLE_COUNT; i++) {
-          particles.push(new Particle());
-        }
-
-        function animateParticles() {
-          ctx.clearRect(0, 0, width, height);
-          for (let i = 0; i < particles.length; i++) {
-            particles[i].update();
-            particles[i].draw();
-          }
-          requestAnimationFrame(animateParticles);
+      function animateParticles() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw();
         }
         requestAnimationFrame(animateParticles);
+      }
+      requestAnimationFrame(animateParticles);
 
-        window.addEventListener('resize', () => {
-          width = canvas.width = window.innerWidth;
-          height = canvas.height = window.innerHeight;
-        });
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
 
-        window.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        isMouseOver = true;
+
+        // Custom cursor tracking
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorRing = document.getElementById('cursor-ring');
+        if (cursorDot && cursorRing) {
+          cursorDot.style.left = `${mouseX}px`;
+          cursorDot.style.top = `${mouseY}px`;
+          cursorRing.style.left = `${mouseX}px`;
+          cursorRing.style.top = `${mouseY}px`;
+          cursorDot.classList.remove('opacity-0');
+          cursorRing.classList.remove('opacity-0');
+        }
+      });
+
+      window.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+          mouseX = e.touches[0].clientX;
+          mouseY = e.touches[0].clientY;
           isMouseOver = true;
+        }
+      }, { passive: true });
 
-          // Custom cursor tracking
-          const cursorDot = document.getElementById('cursor-dot');
-          const cursorRing = document.getElementById('cursor-ring');
-          if (cursorDot && cursorRing) {
-            cursorDot.style.left = `${mouseX}px`;
-            cursorDot.style.top = `${mouseY}px`;
-            cursorRing.style.left = `${mouseX}px`;
-            cursorRing.style.top = `${mouseY}px`;
-            cursorDot.classList.remove('opacity-0');
-            cursorRing.classList.remove('opacity-0');
+      // Shockwave burst on click
+      window.addEventListener('click', (e) => {
+        const clickX = e.clientX;
+        const clickY = e.clientY;
+        for (let p of particles) {
+          const dx = p.x - clickX;
+          const dy = p.y - clickY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 180 && dist > 0) {
+            const blast = (1 - dist / 180) * 8;
+            p.x += (dx / dist) * blast;
+            p.y += (dy / dist) * blast;
           }
+        }
+      });
+
+      /* -------------------------------------------------------------
+       * 4. BACKGROUND VIDEO AUDIO & VOLUME ENGINE
+       * ----------------------------------------------------------- */
+      let isVideoMuted = false;
+
+      function applyVideoAudio() {
+        const video = document.getElementById('bg-video');
+        const volSlider = document.getElementById('video-volume-slider');
+        const volPercent = document.getElementById('video-volume-percent');
+        const high = document.getElementById('icon-vol-high');
+        const mutedIcon = document.getElementById('icon-vol-muted');
+
+        if (!video) return;
+
+        if (isVideoMuted || currentVolume === 0) {
+          video.muted = true;
+          video.volume = 0;
+          if (volSlider) volSlider.value = 0;
+          if (volPercent) volPercent.textContent = '0%';
+          if (high) high.classList.add('hidden');
+          if (mutedIcon) mutedIcon.classList.remove('hidden');
+        } else {
+          video.muted = false;
+          video.volume = currentVolume;
+          if (volSlider) volSlider.value = currentVolume;
+          if (volPercent) volPercent.textContent = `${Math.round(currentVolume * 100)}%`;
+          if (high) high.classList.remove('hidden');
+          if (mutedIcon) mutedIcon.classList.add('hidden');
+        }
+      }
+
+      const volSlider = document.getElementById('video-volume-slider');
+      if (volSlider) {
+        volSlider.value = currentVolume;
+        volSlider.addEventListener('input', (e) => {
+          const val = parseFloat(e.target.value);
+          currentVolume = val;
+          isVideoMuted = (val === 0);
+          localStorage.setItem('sungodnika_video_vol', currentVolume.toString());
+          applyVideoAudio();
         });
+      }
 
-        window.addEventListener('touchmove', (e) => {
-          if (e.touches.length > 0) {
-            mouseX = e.touches[0].clientX;
-            mouseY = e.touches[0].clientY;
-            isMouseOver = true;
-          }
-        }, { passive: true });
-
-        // Shockwave burst on click
-        window.addEventListener('click', (e) => {
-          const clickX = e.clientX;
-          const clickY = e.clientY;
-          for (let p of particles) {
-            const dx = p.x - clickX;
-            const dy = p.y - clickY;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 180 && dist > 0) {
-              const blast = (1 - dist / 180) * 8;
-              p.x += (dx / dist) * blast;
-              p.y += (dy / dist) * blast;
-            }
-          }
-        });
-
-        /* -------------------------------------------------------------
-         * 4. BACKGROUND VIDEO AUDIO & VOLUME ENGINE
-         * ----------------------------------------------------------- */
-        let isVideoMuted = false;
-
-        function applyVideoAudio() {
+      const quickMuteBtn = document.getElementById('btn-quick-mute');
+      if (quickMuteBtn) {
+        quickMuteBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
           const video = document.getElementById('bg-video');
-          const volSlider = document.getElementById('video-volume-slider');
-          const volPercent = document.getElementById('video-volume-percent');
-          const high = document.getElementById('icon-vol-high');
-          const mutedIcon = document.getElementById('icon-vol-muted');
-
           if (!video) return;
 
-          if (isVideoMuted || currentVolume === 0) {
-            video.muted = true;
-            video.volume = 0;
-            if (volSlider) volSlider.value = 0;
-            if (volPercent) volPercent.textContent = '0%';
-            if (high) high.classList.add('hidden');
-            if (mutedIcon) mutedIcon.classList.remove('hidden');
-          } else {
-            video.muted = false;
-            video.volume = currentVolume;
-            if (volSlider) volSlider.value = currentVolume;
-            if (volPercent) volPercent.textContent = `${Math.round(currentVolume * 100)}%`;
-            if (high) high.classList.remove('hidden');
-            if (mutedIcon) mutedIcon.classList.add('hidden');
-          }
-        }
-
-        const volSlider = document.getElementById('video-volume-slider');
-        if (volSlider) {
-          volSlider.value = currentVolume;
-          volSlider.addEventListener('input', (e) => {
-            const val = parseFloat(e.target.value);
-            currentVolume = val;
-            isVideoMuted = (val === 0);
-            localStorage.setItem('sungodnika_video_vol', currentVolume.toString());
+          if (!isVideoMuted && currentVolume > 0) {
+            video.dataset.prevVol = currentVolume;
+            isVideoMuted = true;
             applyVideoAudio();
-          });
+            showToast('Video audio muted');
+          } else {
+            currentVolume = parseFloat(video.dataset.prevVol || 0.5) || 0.5;
+            isVideoMuted = false;
+            applyVideoAudio();
+            showToast('Video audio unmuted');
+          }
+        });
+      }
+
+      /* -------------------------------------------------------------
+       * 6. LANYARD WEBSOCKET & DISCORD PRESENCE INTEGRATION
+       * ----------------------------------------------------------- */
+      let lanyardWs = null;
+      let lanyardHeartbeatTimer = null;
+      let activityLiveTimer = null;
+
+      function resolveAssetUrl(imgKey, applicationId) {
+        if (!imgKey || typeof imgKey !== 'string') return null;
+        if (imgKey.startsWith('mp:external/')) {
+          return `https://media.discordapp.net/external/${imgKey.replace('mp:external/', '')}`;
         }
-
-        const quickMuteBtn = document.getElementById('btn-quick-mute');
-        if (quickMuteBtn) {
-          quickMuteBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const video = document.getElementById('bg-video');
-            if (!video) return;
-
-            if (!isVideoMuted && currentVolume > 0) {
-              video.dataset.prevVol = currentVolume;
-              isVideoMuted = true;
-              applyVideoAudio();
-              showToast('Video audio muted');
-            } else {
-              currentVolume = parseFloat(video.dataset.prevVol || 0.5) || 0.5;
-              isVideoMuted = false;
-              applyVideoAudio();
-              showToast('Video audio unmuted');
-            }
-          });
+        if (imgKey.startsWith('spotify:')) {
+          return `https://i.scdn.co/image/${imgKey.replace('spotify:', '')}`;
         }
-
-        /* -------------------------------------------------------------
-         * 6. LANYARD WEBSOCKET & DISCORD PRESENCE INTEGRATION
-         * ----------------------------------------------------------- */
-        let lanyardWs = null;
-        let lanyardHeartbeatTimer = null;
-        let activityLiveTimer = null;
-
-        function resolveAssetUrl(imgKey, applicationId) {
-          if (!imgKey || typeof imgKey !== 'string') return null;
-          if (imgKey.startsWith('mp:external/')) {
-            return `https://media.discordapp.net/external/${imgKey.replace('mp:external/', '')}`;
-          }
-          if (imgKey.startsWith('spotify:')) {
-            return `https://i.scdn.co/image/${imgKey.replace('spotify:', '')}`;
-          }
-          if (applicationId) {
-            return `https://cdn.discordapp.com/app-assets/${applicationId}/${imgKey}.png`;
-          }
-          return null;
+        if (applicationId) {
+          return `https://cdn.discordapp.com/app-assets/${applicationId}/${imgKey}.png`;
         }
+        return null;
+      }
 
-        function getActivityImageUrl(activity) {
-          if (!activity) return null;
-          if (activity.assets?.large_image) {
-            const url = resolveAssetUrl(activity.assets.large_image, activity.application_id);
-            if (url) return url;
-          }
-          if (activity.assets?.small_image) {
-            const url = resolveAssetUrl(activity.assets.small_image, activity.application_id);
-            if (url) return url;
-          }
-          if (activity.application_id && activity.icon) {
-            return `https://cdn.discordapp.com/app-icons/${activity.application_id}/${activity.icon}.png`;
-          }
-          return null;
+      function getActivityImageUrl(activity) {
+        if (!activity) return null;
+        if (activity.assets?.large_image) {
+          const url = resolveAssetUrl(activity.assets.large_image, activity.application_id);
+          if (url) return url;
         }
+        if (activity.assets?.small_image) {
+          const url = resolveAssetUrl(activity.assets.small_image, activity.application_id);
+          if (url) return url;
+        }
+        if (activity.application_id && activity.icon) {
+          return `https://cdn.discordapp.com/app-icons/${activity.application_id}/${activity.icon}.png`;
+        }
+        return null;
+      }
 
-        function handleLanyardUnconfigured() {
-          const syncBadge = document.getElementById('lanyard-sync-status');
-          if (syncBadge) {
-            syncBadge.textContent = 'SET DISCORD ID';
-            syncBadge.className = 'text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30';
-          }
-          const userEl = document.getElementById('discord-username-display');
-          if (userEl) userEl.textContent = config.discordTag || 'Discord';
+      function handleLanyardUnconfigured() {
+        const syncBadge = document.getElementById('lanyard-sync-status');
+        if (syncBadge) {
+          syncBadge.textContent = 'SET DISCORD ID';
+          syncBadge.className = 'text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30';
+        }
+        const userEl = document.getElementById('discord-username-display');
+        if (userEl) userEl.textContent = config.discordTag || 'Discord';
 
-          const container = document.getElementById('discord-activities-container');
-          if (container) {
-            container.innerHTML = `
+        const container = document.getElementById('discord-activities-container');
+        if (container) {
+          container.innerHTML = `
               <div class="rounded-[20px] bg-[#1a1728]/85 border border-amber-500/30 p-3.5 sm:p-4 text-left">
                 <h4 class="font-bold text-amber-300 text-[14px]">Discord ID Not Set</h4>
                 <p class="text-xs text-zinc-300 mt-1">Open config.js and add your numeric Discord User ID.</p>
               </div>`;
-          }
-
-          console.warn(
-            '%c[Discord Presence Setup Required]%c\n' +
-            'Your Discord User ID is not configured yet in config.js!\n\n' +
-            'How to get your Discord User ID:\n' +
-            '1. Open Discord -> User Settings (gear icon) -> Advanced -> Turn ON "Developer Mode".\n' +
-            '2. Right-click your own profile picture/name -> Click "Copy User ID".\n' +
-            '3. Open config.js in your project and replace discordId with your numeric ID (e.g. "94490510688792576").\n' +
-            '4. Join the Lanyard Discord server (https://discord.gg/lanyard) so the API has permission to monitor you.\n' +
-            '5. In Discord -> User Settings -> Activity Privacy -> Turn ON "Display current activity as a status message".',
-            'color: #00f2fe; font-weight: bold; font-size: 13px;',
-            'color: #cbd5e1; font-size: 11px;'
-          );
         }
 
-        function handleLanyardNotMonitored(userId) {
-          const syncBadge = document.getElementById('lanyard-sync-status');
-          if (syncBadge) {
-            syncBadge.innerHTML = `<a href="https://discord.gg/lanyard" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1" title="Lanyard can only track your presence if you join their server. Click to join!">JOIN LANYARD GUILD ↗</a>`;
-            syncBadge.className = 'text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30';
-          }
+        console.warn(
+          '%c[Discord Presence Setup Required]%c\n' +
+          'Your Discord User ID is not configured yet in config.js!\n\n' +
+          'How to get your Discord User ID:\n' +
+          '1. Open Discord -> User Settings (gear icon) -> Advanced -> Turn ON "Developer Mode".\n' +
+          '2. Right-click your own profile picture/name -> Click "Copy User ID".\n' +
+          '3. Open config.js in your project and replace discordId with your numeric ID (e.g. "94490510688792576").\n' +
+          '4. Join the Lanyard Discord server (https://discord.gg/lanyard) so the API has permission to monitor you.\n' +
+          '5. In Discord -> User Settings -> Activity Privacy -> Turn ON "Display current activity as a status message".',
+          'color: #00f2fe; font-weight: bold; font-size: 13px;',
+          'color: #cbd5e1; font-size: 11px;'
+        );
+      }
 
-          const userEl = document.getElementById('discord-username-display');
-          if (userEl) userEl.textContent = config.discordTag || `@${userId}`;
+      function handleLanyardNotMonitored(userId) {
+        const syncBadge = document.getElementById('lanyard-sync-status');
+        if (syncBadge) {
+          syncBadge.innerHTML = `<a href="https://discord.gg/lanyard" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center gap-1" title="Lanyard can only track your presence if you join their server. Click to join!">JOIN LANYARD GUILD ↗</a>`;
+          syncBadge.className = 'text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30';
+        }
 
-          const container = document.getElementById('discord-activities-container');
-          if (container) {
-            container.innerHTML = `
+        const userEl = document.getElementById('discord-username-display');
+        if (userEl) userEl.textContent = config.discordTag || `@${userId}`;
+
+        const container = document.getElementById('discord-activities-container');
+        if (container) {
+          container.innerHTML = `
               <div class="rounded-[20px] bg-[#1a1728]/85 border border-amber-500/30 p-3.5 sm:p-4 text-left">
                 <h4 class="font-bold text-amber-300 text-[14px]">Lanyard Sync Required</h4>
                 <p class="text-xs text-zinc-300 mt-1">User ID (${userId}) must be in the Lanyard Discord server.</p>
                 <a href="https://discord.gg/lanyard" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-mono font-bold text-amber-400 hover:underline">JOIN LANYARD GUILD ↗</a>
               </div>`;
-          }
-
-          console.warn(
-            `%c[Discord / Lanyard Notice]%c\n` +
-            `Discord User ID (${userId}) is valid, but Lanyard is not monitoring your account!\n\n` +
-            `Discord only lets bots read presences if they share a server with you.\n` +
-            `👉 Join the official Lanyard Discord server here: https://discord.gg/lanyard\n\n` +
-            `Also make sure:\n` +
-            `- Discord Settings -> Activity Privacy -> "Display current activity as a status message" is ON.`,
-            'color: #fbbf24; font-weight: bold; font-size: 13px;',
-            'color: #cbd5e1; font-size: 11px;'
-          );
         }
 
-        function getDiscordStatusIconSvg(status) {
-          switch (status) {
-            case 'dnd':
-              return `<svg class="w-full h-full" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f23f43"/><rect x="5.5" y="10.25" width="13" height="3.5" rx="1.75" fill="#0d0d16"/></svg>`;
-            case 'idle':
-              return `<svg class="w-full h-full" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f0b232"/><circle cx="7.5" cy="7.5" r="7.5" fill="#0d0d16"/></svg>`;
-            case 'online':
-              return `<svg class="w-full h-full" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#23a55a"/></svg>`;
-            case 'offline':
-            default:
-              return `<svg class="w-full h-full" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#80848e"/><circle cx="12" cy="12" r="5" fill="#0d0d16"/></svg>`;
-          }
+        console.warn(
+          `%c[Discord / Lanyard Notice]%c\n` +
+          `Discord User ID (${userId}) is valid, but Lanyard is not monitoring your account!\n\n` +
+          `Discord only lets bots read presences if they share a server with you.\n` +
+          `👉 Join the official Lanyard Discord server here: https://discord.gg/lanyard\n\n` +
+          `Also make sure:\n` +
+          `- Discord Settings -> Activity Privacy -> "Display current activity as a status message" is ON.`,
+          'color: #fbbf24; font-weight: bold; font-size: 13px;',
+          'color: #cbd5e1; font-size: 11px;'
+        );
+      }
+
+      function getDiscordStatusIconSvg(status) {
+        switch (status) {
+          case 'dnd':
+            return `<svg class="w-full h-full" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f23f43"/><rect x="5.5" y="10.25" width="13" height="3.5" rx="1.75" fill="#0d0d16"/></svg>`;
+          case 'idle':
+            return `<svg class="w-full h-full" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f0b232"/><circle cx="7.5" cy="7.5" r="7.5" fill="#0d0d16"/></svg>`;
+          case 'online':
+            return `<svg class="w-full h-full" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#23a55a"/></svg>`;
+          case 'offline':
+          default:
+            return `<svg class="w-full h-full" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#80848e"/><circle cx="12" cy="12" r="5" fill="#0d0d16"/></svg>`;
+        }
+      }
+
+      function connectLanyard() {
+        const userId = (config.discordId || '').trim();
+
+        // Check for valid numeric snowflake ID (17-20 digits)
+        if (!userId || !/^\d{17,20}$/.test(userId)) {
+          handleLanyardUnconfigured();
+          return;
         }
 
-        function connectLanyard() {
-          const userId = (config.discordId || '').trim();
+        // Immediately fetch REST endpoint for instant initial render
+        fallbackRestLanyard(userId);
 
-          // Check for valid numeric snowflake ID (17-20 digits)
-          if (!userId || !/^\d{17,20}$/.test(userId)) {
-            handleLanyardUnconfigured();
-            return;
-          }
-
-          // Immediately fetch REST endpoint for instant initial render
-          fallbackRestLanyard(userId);
-
-          // Continuous REST polling fallback every 5 seconds to ensure real-time presence sync
-          if (!window.lanyardPollInterval) {
-            window.lanyardPollInterval = setInterval(() => {
-              fallbackRestLanyard(userId);
-            }, 5000);
-          }
-
-          try {
-            if (lanyardWs) {
-              lanyardWs.onclose = null;
-              lanyardWs.close();
-            }
-            lanyardWs = new WebSocket('wss://api.lanyard.rest/socket');
-
-            lanyardWs.onmessage = (event) => {
-              const data = JSON.parse(event.data);
-              const { op, t, d } = data;
-
-              if (op === 1) {
-                // Heartbeat setup
-                const heartbeatInterval = d.heartbeat_interval || 30000;
-                if (lanyardHeartbeatTimer) clearInterval(lanyardHeartbeatTimer);
-                lanyardHeartbeatTimer = setInterval(() => {
-                  if (lanyardWs && lanyardWs.readyState === WebSocket.OPEN) {
-                    lanyardWs.send(JSON.stringify({ op: 3 }));
-                  }
-                }, heartbeatInterval);
-
-                // Subscribe to user presence
-                lanyardWs.send(JSON.stringify({
-                  op: 2,
-                  d: { subscribe_to_id: userId }
-                }));
-              } else if (t === 'INIT_STATE' || t === 'PRESENCE_UPDATE') {
-                if (!d || Object.keys(d).length === 0 || !d.discord_user) {
-                  // Empty object means user is not monitored by Lanyard
-                  handleLanyardNotMonitored(userId);
-                } else {
-                  updateDiscordPresenceDOM(d);
-                }
-              }
-            };
-
-            lanyardWs.onerror = () => {
-              fallbackRestLanyard(userId);
-            };
-
-            lanyardWs.onclose = () => {
-              if (lanyardHeartbeatTimer) clearInterval(lanyardHeartbeatTimer);
-              // Retry WebSocket connection after 10 seconds
-              setTimeout(() => connectLanyard(), 10000);
-            };
-          } catch (e) {
+        // Continuous REST polling fallback every 5 seconds to ensure real-time presence sync
+        if (!window.lanyardPollInterval) {
+          window.lanyardPollInterval = setInterval(() => {
             fallbackRestLanyard(userId);
-          }
+          }, 5000);
         }
 
-        async function fallbackRestLanyard(userId) {
-          try {
-            const res = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);
-            const json = await res.json();
-            if (json.success && json.data && json.data.discord_user) {
-              updateDiscordPresenceDOM(json.data);
-            } else if (json.error?.code === 'user_not_monitored') {
-              handleLanyardNotMonitored(userId);
-            } else {
-              handleLanyardUnconfigured();
-            }
-          } catch (e) {
-            console.warn('Lanyard REST fallback error:', e);
+        try {
+          if (lanyardWs) {
+            lanyardWs.onclose = null;
+            lanyardWs.close();
           }
+          lanyardWs = new WebSocket('wss://api.lanyard.rest/socket');
+
+          lanyardWs.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            const { op, t, d } = data;
+
+            if (op === 1) {
+              // Heartbeat setup
+              const heartbeatInterval = d.heartbeat_interval || 30000;
+              if (lanyardHeartbeatTimer) clearInterval(lanyardHeartbeatTimer);
+              lanyardHeartbeatTimer = setInterval(() => {
+                if (lanyardWs && lanyardWs.readyState === WebSocket.OPEN) {
+                  lanyardWs.send(JSON.stringify({ op: 3 }));
+                }
+              }, heartbeatInterval);
+
+              // Subscribe to user presence
+              lanyardWs.send(JSON.stringify({
+                op: 2,
+                d: { subscribe_to_id: userId }
+              }));
+            } else if (t === 'INIT_STATE' || t === 'PRESENCE_UPDATE') {
+              if (!d || Object.keys(d).length === 0 || !d.discord_user) {
+                // Empty object means user is not monitored by Lanyard
+                handleLanyardNotMonitored(userId);
+              } else {
+                updateDiscordPresenceDOM(d);
+              }
+            }
+          };
+
+          lanyardWs.onerror = () => {
+            fallbackRestLanyard(userId);
+          };
+
+          lanyardWs.onclose = () => {
+            if (lanyardHeartbeatTimer) clearInterval(lanyardHeartbeatTimer);
+            // Retry WebSocket connection after 10 seconds
+            setTimeout(() => connectLanyard(), 10000);
+          };
+        } catch (e) {
+          fallbackRestLanyard(userId);
         }
+      }
 
-        function updateDiscordPresenceDOM(userData) {
-          if (!userData || !userData.discord_user) return;
-          const user = userData.discord_user;
-          const status = userData.discord_status || 'dnd';
-
-          // 1. Discord Username: Strictly user.username ("nika.nx8"), never "You"
-          const userEl = document.getElementById('discord-username-display');
-          if (userEl) {
-            userEl.textContent = user.username || 'nika.nx8';
-          }
-
-          // 2. Clan Tag Pill: CODE with blue flame icon
-          const clanBadge = document.getElementById('presence-clan-badge');
-          const clanIcon = document.getElementById('presence-clan-icon');
-          const clanTag = document.getElementById('presence-clan-tag');
-          if (user.primary_guild && user.primary_guild.tag) {
-            if (clanTag) clanTag.textContent = user.primary_guild.tag;
-            if (clanIcon && user.primary_guild.identity_guild_id && user.primary_guild.badge) {
-              clanIcon.src = `https://cdn.discordapp.com/clan-badges/${user.primary_guild.identity_guild_id}/${user.primary_guild.badge}.png`;
-            }
-            if (clanBadge) clanBadge.style.display = 'inline-flex';
-          } else if (clanBadge) {
-            if (user.username === 'nika.nx8') {
-              if (clanTag) clanTag.textContent = 'CODE';
-              if (clanIcon) clanIcon.src = 'https://cdn.discordapp.com/clan-badges/547906569489350657/3858554c542da4e8e4b52ff00a558ced.png';
-              clanBadge.style.display = 'inline-flex';
-            }
-          }
-
-          // 3. User Avatar (PFP) URL computation
-          let discordAvatarUrl = '';
-          if (user.avatar) {
-            const isGif = user.avatar.startsWith('a_');
-            discordAvatarUrl = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${isGif ? 'gif' : 'png'}?size=512`;
+      async function fallbackRestLanyard(userId) {
+        try {
+          const res = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);
+          const json = await res.json();
+          if (json.success && json.data && json.data.discord_user) {
+            updateDiscordPresenceDOM(json.data);
+          } else if (json.error?.code === 'user_not_monitored') {
+            handleLanyardNotMonitored(userId);
           } else {
-            const defaultIdx = user.discriminator && user.discriminator !== '0'
-              ? (parseInt(user.discriminator, 10) % 5)
-              : Number((BigInt(user.id) >> 22n) % 6n);
-            discordAvatarUrl = `https://cdn.discordapp.com/embed/avatars/${defaultIdx}.png`;
+            handleLanyardUnconfigured();
           }
+        } catch (e) {
+          console.warn('Lanyard REST fallback error:', e);
+        }
+      }
 
-          // Update mini avatar on presence bar
-          const miniAvatar = document.getElementById('presence-mini-avatar');
-          if (miniAvatar && discordAvatarUrl) {
-            if (miniAvatar.src !== discordAvatarUrl) {
-              miniAvatar.src = discordAvatarUrl;
-            }
+      function updateDiscordPresenceDOM(userData) {
+        if (!userData || !userData.discord_user) return;
+        const user = userData.discord_user;
+        const status = userData.discord_status || 'dnd';
+
+        // 1. Discord Username: Strictly user.username ("nika.nx8"), never "You"
+        const userEl = document.getElementById('discord-username-display');
+        if (userEl) {
+          userEl.textContent = user.username || 'nika.nx8';
+        }
+
+        // 2. Clan Tag Pill: CODE with blue flame icon
+        const clanBadge = document.getElementById('presence-clan-badge');
+        const clanIcon = document.getElementById('presence-clan-icon');
+        const clanTag = document.getElementById('presence-clan-tag');
+        if (user.primary_guild && user.primary_guild.tag) {
+          if (clanTag) clanTag.textContent = user.primary_guild.tag;
+          if (clanIcon && user.primary_guild.identity_guild_id && user.primary_guild.badge) {
+            clanIcon.src = `https://cdn.discordapp.com/clan-badges/${user.primary_guild.identity_guild_id}/${user.primary_guild.badge}.png`;
           }
-
-          // Automatically set main profile avatar if not explicitly overridden by custom non-empty avatarUrl
-          const profileAvatar = document.getElementById('profile-avatar');
-          if (profileAvatar && (!config.avatarUrl || config.avatarUrl.trim() === '')) {
-            if (profileAvatar.src !== discordAvatarUrl) {
-              profileAvatar.src = discordAvatarUrl;
-            }
+          if (clanBadge) clanBadge.style.display = 'inline-flex';
+        } else if (clanBadge) {
+          if (user.username === 'nika.nx8') {
+            if (clanTag) clanTag.textContent = 'CODE';
+            if (clanIcon) clanIcon.src = 'https://cdn.discordapp.com/clan-badges/547906569489350657/3858554c542da4e8e4b52ff00a558ced.png';
+            clanBadge.style.display = 'inline-flex';
           }
+        }
 
-          // 4. Live Discord Avatar Decoration
-          const decorAsset = user.avatar_decoration_data?.asset || user.avatar_decoration;
-          const decorWrap = document.getElementById('avatar-decoration-wrap');
-          const decorImg = document.getElementById('avatar-decoration-img');
+        // 3. User Avatar (PFP) URL computation
+        let discordAvatarUrl = '';
+        if (user.avatar) {
+          const isGif = user.avatar.startsWith('a_');
+          discordAvatarUrl = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${isGif ? 'gif' : 'png'}?size=512`;
+        } else {
+          const defaultIdx = user.discriminator && user.discriminator !== '0'
+            ? (parseInt(user.discriminator, 10) % 5)
+            : Number((BigInt(user.id) >> 22n) % 6n);
+          discordAvatarUrl = `https://cdn.discordapp.com/embed/avatars/${defaultIdx}.png`;
+        }
 
-          if (decorAsset && decorWrap && decorImg) {
-            const decorUrl = `https://cdn.discordapp.com/avatar-decoration-presets/${decorAsset}.png?size=512&passthrough=true`;
-            const testImg = new Image();
-            testImg.onload = () => {
-              decorImg.src = decorUrl;
-              decorWrap.classList.remove('hidden');
-              decorWrap.classList.add('flex');
-            };
-            testImg.onerror = () => {
-              decorWrap.classList.add('hidden');
-              decorWrap.classList.remove('flex');
-              decorImg.src = '';
-            };
-            testImg.src = decorUrl;
-          } else if (decorWrap) {
+        // Update mini avatar on presence bar
+        const miniAvatar = document.getElementById('presence-mini-avatar');
+        if (miniAvatar && discordAvatarUrl) {
+          if (miniAvatar.src !== discordAvatarUrl) {
+            miniAvatar.src = discordAvatarUrl;
+          }
+        }
+
+        // Automatically set main profile avatar if not explicitly overridden by custom non-empty avatarUrl
+        const profileAvatar = document.getElementById('profile-avatar');
+        if (profileAvatar && (!config.avatarUrl || config.avatarUrl.trim() === '')) {
+          if (profileAvatar.src !== discordAvatarUrl) {
+            profileAvatar.src = discordAvatarUrl;
+          }
+        }
+
+        // 4. Live Discord Avatar Decoration
+        const decorAsset = user.avatar_decoration_data?.asset || user.avatar_decoration;
+        const decorWrap = document.getElementById('avatar-decoration-wrap');
+        const decorImg = document.getElementById('avatar-decoration-img');
+
+        if (decorAsset && decorWrap && decorImg) {
+          const decorUrl = `https://cdn.discordapp.com/avatar-decoration-presets/${decorAsset}.png?size=512&passthrough=true`;
+          const testImg = new Image();
+          testImg.onload = () => {
+            decorImg.src = decorUrl;
+            decorWrap.classList.remove('hidden');
+            decorWrap.classList.add('flex');
+          };
+          testImg.onerror = () => {
             decorWrap.classList.add('hidden');
             decorWrap.classList.remove('flex');
-            if (decorImg) decorImg.src = '';
-          }
-
-          // 5. Authentic Status Indicator Badges (both main profile and presence bar)
-          const statusGlows = {
-            online: 'shadow-[0_0_14px_rgba(35,165,90,0.85)]',
-            idle: 'shadow-[0_0_14px_rgba(240,178,50,0.85)]',
-            dnd: 'shadow-[0_0_14px_rgba(242,63,67,0.85)]',
-            offline: 'shadow-[0_0_8px_rgba(128,132,142,0.4)]',
+            decorImg.src = '';
           };
-          const statusTitles = {
-            online: 'Online on Discord',
-            idle: 'Idle on Discord',
-            dnd: 'Do Not Disturb on Discord',
-            offline: 'Offline on Discord',
-          };
+          testImg.src = decorUrl;
+        } else if (decorWrap) {
+          decorWrap.classList.add('hidden');
+          decorWrap.classList.remove('flex');
+          if (decorImg) decorImg.src = '';
+        }
 
-          const indicator = document.getElementById('status-indicator-badge');
-          const statusIconInner = document.getElementById('status-icon-inner');
-          if (indicator) {
-            indicator.title = statusTitles[status] || 'Discord Status';
-            indicator.className = `absolute bottom-0 right-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#0d0d16] p-0.5 border-2 border-[#0d0d16] z-30 transition-transform duration-200 group-hover:scale-110 flex items-center justify-center ${statusGlows[status] || ''}`;
-          }
-          if (statusIconInner) {
-            statusIconInner.innerHTML = getDiscordStatusIconSvg(status);
-          }
+        // 5. Authentic Status Indicator Badges (both main profile and presence bar)
+        const statusGlows = {
+          online: 'shadow-[0_0_14px_rgba(35,165,90,0.85)]',
+          idle: 'shadow-[0_0_14px_rgba(240,178,50,0.85)]',
+          dnd: 'shadow-[0_0_14px_rgba(242,63,67,0.85)]',
+          offline: 'shadow-[0_0_8px_rgba(128,132,142,0.4)]',
+        };
+        const statusTitles = {
+          online: 'Online on Discord',
+          idle: 'Idle on Discord',
+          dnd: 'Do Not Disturb on Discord',
+          offline: 'Offline on Discord',
+        };
 
-          // Presence bar status badge
-          const presenceStatus = document.getElementById('presence-status-badge');
-          if (presenceStatus) {
-            presenceStatus.title = statusTitles[status] || 'Discord Status';
-            presenceStatus.innerHTML = getDiscordStatusIconSvg(status);
-          }
+        const indicator = document.getElementById('status-indicator-badge');
+        const statusIconInner = document.getElementById('status-icon-inner');
+        if (indicator) {
+          indicator.title = statusTitles[status] || 'Discord Status';
+          indicator.className = `absolute bottom-0 right-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#0d0d16] p-0.5 border-2 border-[#0d0d16] z-30 transition-transform duration-200 group-hover:scale-110 flex items-center justify-center ${statusGlows[status] || ''}`;
+        }
+        if (statusIconInner) {
+          statusIconInner.innerHTML = getDiscordStatusIconSvg(status);
+        }
 
-          // 6. Dynamic Multi-Activity Rendering (Supports VS Code + Spotify + games simultaneously)
-          if (activityLiveTimer) {
-            clearInterval(activityLiveTimer);
-            activityLiveTimer = null;
-          }
+        // Presence bar status badge
+        const presenceStatus = document.getElementById('presence-status-badge');
+        if (presenceStatus) {
+          presenceStatus.title = statusTitles[status] || 'Discord Status';
+          presenceStatus.innerHTML = getDiscordStatusIconSvg(status);
+        }
 
-          const container = document.getElementById('discord-activities-container');
-          if (!container) return;
+        // 6. Dynamic Multi-Activity Rendering (Supports VS Code + Spotify + games simultaneously)
+        if (activityLiveTimer) {
+          clearInterval(activityLiveTimer);
+          activityLiveTimer = null;
+        }
 
-          const activeCardsHtml = [];
+        const container = document.getElementById('discord-activities-container');
+        if (!container) return;
 
-          // 6A. Rich Presence Activities (Games, VS Code, Apps), excluding custom status (type 4) and raw Spotify item
-          const rawActivities = (userData.activities || []).filter(a => a.type !== 4 && a.id !== 'spotify:1' && a.name !== 'Spotify');
+        const activeCardsHtml = [];
 
-          rawActivities.forEach(activity => {
-            const typeNames = { 0: 'Playing', 1: 'Streaming', 2: 'Listening to', 3: 'Watching', 5: 'Competing in' };
-            const verb = typeNames[activity.type] || 'Playing';
+        // 6A. Rich Presence Activities (Games, VS Code, Apps), excluding custom status (type 4) and raw Spotify item
+        const rawActivities = (userData.activities || []).filter(a => a.type !== 4 && a.id !== 'spotify:1' && a.name !== 'Spotify');
 
-            const isVSCode = activity.name.toLowerCase().includes('visual studio code') || activity.name.toLowerCase().includes('code');
+        rawActivities.forEach(activity => {
+          const typeNames = { 0: 'Playing', 1: 'Streaming', 2: 'Listening to', 3: 'Watching', 5: 'Competing in' };
+          const verb = typeNames[activity.type] || 'Playing';
 
-            const largeImgUrl = resolveAssetUrl(activity.assets?.large_image, activity.application_id)
-              || (activity.application_id && activity.icon ? `https://cdn.discordapp.com/app-icons/${activity.application_id}/${activity.icon}.png` : null);
+          const isVSCode = activity.name.toLowerCase().includes('visual studio code') || activity.name.toLowerCase().includes('code');
 
-            const smallImgUrl = resolveAssetUrl(activity.assets?.small_image, activity.application_id);
+          const largeImgUrl = resolveAssetUrl(activity.assets?.large_image, activity.application_id)
+            || (activity.application_id && activity.icon ? `https://cdn.discordapp.com/app-icons/${activity.application_id}/${activity.icon}.png` : null);
 
-            // Large asset icon
-            let largeImgHtml = '';
-            if (largeImgUrl) {
-              largeImgHtml = `<img src="${largeImgUrl}" class="w-full h-full object-cover" alt="${activity.name}" />`;
-            } else if (isVSCode) {
-              largeImgHtml = `
+          const smallImgUrl = resolveAssetUrl(activity.assets?.small_image, activity.application_id);
+
+          // Large asset icon
+          let largeImgHtml = '';
+          if (largeImgUrl) {
+            largeImgHtml = `<img src="${largeImgUrl}" class="w-full h-full object-cover" alt="${activity.name}" />`;
+          } else if (isVSCode) {
+            largeImgHtml = `
                 <div class="w-full h-full flex items-center justify-center bg-[#1e1c29] p-2 text-[#c084fc] font-mono font-bold text-2xl select-none">
                   <span>{•}</span>
                 </div>`;
-            } else {
-              largeImgHtml = `
+          } else {
+            largeImgHtml = `
                 <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#ff6224]/30 to-[#a855f7]/30 text-white font-bold font-mono text-sm uppercase">
                   ${activity.name.slice(0, 3)}
                 </div>`;
-            }
+          }
 
-            // Overlapping small badge
-            let smallBadgeHtml = '';
-            if (smallImgUrl) {
-              smallBadgeHtml = `
+          // Overlapping small badge
+          let smallBadgeHtml = '';
+          if (smallImgUrl) {
+            smallBadgeHtml = `
                 <div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-[#1e1f22] p-0.5 border-2 border-[#1a1728] flex items-center justify-center shadow-md">
                   <img src="${smallImgUrl}" class="w-full h-full object-contain rounded-full" alt="" />
                 </div>`;
-            } else if (isVSCode) {
-              smallBadgeHtml = `
+          } else if (isVSCode) {
+            smallBadgeHtml = `
                 <div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-[#1e1f22] p-0.5 border-2 border-[#1a1728] flex items-center justify-center shadow-md">
                   <svg class="w-3.5 h-3.5 text-[#007acc] fill-current" viewBox="0 0 24 24">
                     <path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.27a1 1 0 0 0-.005 1.485l4.303 3.947-4.303 3.947a1 1 0 0 0 .005 1.485l1.322 1.21a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.94-2.377A1.5 1.5 0 0 0 24 21.56V3.944a1.5 1.5 0 0 0-.85-1.357z"/>
                   </svg>
                 </div>`;
-            }
+          }
 
-            // Details / State lines
-            let detailsHtml = '';
-            if (activity.details) {
-              detailsHtml += `<p class="text-xs sm:text-[13px] text-zinc-300/80 font-normal leading-snug truncate select-none mt-0.5">${activity.details}</p>`;
-            }
-            if (activity.state) {
-              detailsHtml += `<p class="text-xs sm:text-[12px] text-zinc-400/80 font-normal leading-snug truncate select-none mt-0.5">${activity.state}</p>`;
-            }
+          // Details / State lines
+          let detailsHtml = '';
+          if (activity.details) {
+            detailsHtml += `<p class="text-xs sm:text-[13px] text-zinc-300/80 font-normal leading-snug truncate select-none mt-0.5">${activity.details}</p>`;
+          }
+          if (activity.state) {
+            detailsHtml += `<p class="text-xs sm:text-[12px] text-zinc-400/80 font-normal leading-snug truncate select-none mt-0.5">${activity.state}</p>`;
+          }
 
-            // Live elapsed timer
-            let timerRowHtml = '';
-            if (activity.timestamps?.start) {
-              timerRowHtml = `
+          // Live elapsed timer
+          let timerRowHtml = '';
+          if (activity.timestamps?.start) {
+            timerRowHtml = `
                 <div class="flex items-center gap-1.5 mt-1 text-xs text-[#23a55a] font-medium leading-none select-none" data-elapsed-start="${activity.timestamps.start}">
                   <svg class="w-3.5 h-3.5 fill-current text-[#23a55a] flex-shrink-0" viewBox="0 0 24 24">
                     <path d="M7 6H17A6 6 0 0 1 23 12A6 6 0 0 1 17 18H7A6 6 0 0 1 1 12A6 6 0 0 1 17 18H7M7 8A4 4 0 0 0 3 12A4 4 0 0 0 7 16H17A4 4 0 0 0 21 12A4 4 0 0 0 17 8H7M6 11H8V9H9V11H11V12H9V14H8V12H6V11M16.5 13.5A1 1 0 1 1 17.5 12.5A1 1 0 0 1 16.5 13.5M14.5 10.5A1 1 0 1 1 15.5 9.5A1 1 0 0 1 14.5 10.5Z"/>
                   </svg>
                   <span class="elapsed-val font-mono text-[12px] sm:text-xs">0:00</span>
                 </div>`;
-            }
+          }
 
-            activeCardsHtml.push(`
+          activeCardsHtml.push(`
               <div class="rounded-[20px] bg-[#1a1728]/85 border border-purple-500/25 hover:border-purple-400/50 p-3.5 sm:p-4 transition-all duration-300 relative overflow-hidden group shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md text-left">
                 <div class="flex items-center justify-between mb-2 text-xs font-bold text-zinc-300/90 tracking-wide select-none">
                   <span>${verb}</span>
@@ -1731,15 +1767,15 @@
                 </div>
               </div>
             `);
-          });
+        });
 
-          // 6B. Live Spotify Activity
-          const spotify = userData.spotify;
-          if (userData.listening_to_spotify && spotify) {
-            const start = spotify.timestamps?.start || 0;
-            const end = spotify.timestamps?.end || 0;
+        // 6B. Live Spotify Activity
+        const spotify = userData.spotify;
+        if (userData.listening_to_spotify && spotify) {
+          const start = spotify.timestamps?.start || 0;
+          const end = spotify.timestamps?.end || 0;
 
-            activeCardsHtml.push(`
+          activeCardsHtml.push(`
               <div class="rounded-[20px] bg-[#1a1728]/85 border border-purple-500/25 hover:border-purple-400/50 p-3.5 sm:p-4 transition-all duration-300 relative overflow-hidden group shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md text-left">
                 <div class="flex items-center justify-between mb-2 text-xs font-bold text-zinc-300/90 tracking-wide select-none">
                   <div class="flex items-center gap-1.5">
@@ -1768,27 +1804,27 @@
                 </div>
               </div>
             `);
-          }
+        }
 
-          // 6C. Custom Status (type 4), if no game or Spotify is active
-          const customStatus = (userData.activities || []).find(a => a.type === 4);
-          if (activeCardsHtml.length === 0 && customStatus && (customStatus.state || customStatus.emoji)) {
-            let emojiHtml = '';
-            if (customStatus.emoji) {
-              if (customStatus.emoji.id) {
-                const isAnim = customStatus.emoji.animated ? 'gif' : 'png';
-                emojiHtml = `<img src="https://cdn.discordapp.com/emojis/${customStatus.emoji.id}.${isAnim}" class="w-4 h-4 inline-block object-contain mr-1" alt="" />`;
-              } else if (customStatus.emoji.name) {
-                emojiHtml = `${customStatus.emoji.name} `;
-              }
+        // 6C. Custom Status (type 4), if no game or Spotify is active
+        const customStatus = (userData.activities || []).find(a => a.type === 4);
+        if (activeCardsHtml.length === 0 && customStatus && (customStatus.state || customStatus.emoji)) {
+          let emojiHtml = '';
+          if (customStatus.emoji) {
+            if (customStatus.emoji.id) {
+              const isAnim = customStatus.emoji.animated ? 'gif' : 'png';
+              emojiHtml = `<img src="https://cdn.discordapp.com/emojis/${customStatus.emoji.id}.${isAnim}" class="w-4 h-4 inline-block object-contain mr-1" alt="" />`;
+            } else if (customStatus.emoji.name) {
+              emojiHtml = `${customStatus.emoji.name} `;
             }
-            const platforms = [];
-            if (userData.active_on_discord_desktop) platforms.push('Desktop');
-            if (userData.active_on_discord_mobile) platforms.push('Mobile');
-            if (userData.active_on_discord_web) platforms.push('Web');
-            const platStr = platforms.length ? `Active on ${platforms.join(' & ')}` : 'Active';
+          }
+          const platforms = [];
+          if (userData.active_on_discord_desktop) platforms.push('Desktop');
+          if (userData.active_on_discord_mobile) platforms.push('Mobile');
+          if (userData.active_on_discord_web) platforms.push('Web');
+          const platStr = platforms.length ? `Active on ${platforms.join(' & ')}` : 'Active';
 
-            activeCardsHtml.push(`
+          activeCardsHtml.push(`
               <div class="rounded-[20px] bg-[#1a1728]/85 border border-purple-500/25 hover:border-purple-400/50 p-3.5 sm:p-4 transition-all duration-300 relative overflow-hidden group shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md text-left">
                 <div class="flex items-center justify-between mb-2 text-xs font-bold text-zinc-300/90 tracking-wide select-none">
                   <span>Custom Status</span>
@@ -1810,17 +1846,17 @@
                 </div>
               </div>
             `);
-          }
+        }
 
-          // 6D. Genuine Standby State (When Discord Gateway broadcasts 0 active sessions)
-          if (activeCardsHtml.length === 0) {
-            const platforms = [];
-            if (userData.active_on_discord_desktop) platforms.push('Desktop');
-            if (userData.active_on_discord_mobile) platforms.push('Mobile');
-            if (userData.active_on_discord_web) platforms.push('Web');
-            const platStr = platforms.length ? `Connected on ${platforms.join(' & ')}` : 'Connected to Discord';
+        // 6D. Genuine Standby State (When Discord Gateway broadcasts 0 active sessions)
+        if (activeCardsHtml.length === 0) {
+          const platforms = [];
+          if (userData.active_on_discord_desktop) platforms.push('Desktop');
+          if (userData.active_on_discord_mobile) platforms.push('Mobile');
+          if (userData.active_on_discord_web) platforms.push('Web');
+          const platStr = platforms.length ? `Connected on ${platforms.join(' & ')}` : 'Connected to Discord';
 
-            activeCardsHtml.push(`
+          activeCardsHtml.push(`
               <div class="rounded-[20px] bg-[#1a1728]/85 border border-purple-500/25 p-3.5 sm:p-4 relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-md text-left">
                 <div class="flex items-center justify-between mb-2 text-xs font-bold text-zinc-400 select-none">
                   <span>Discord Presence</span>
@@ -1848,308 +1884,310 @@
                 </div>
               </div>
             `);
-          }
-
-          container.innerHTML = activeCardsHtml.join('');
-
-          // 6E. Master Timer Interval for Live Updates
-          function tickTimers() {
-            const now = Date.now();
-            // Spotify progress bars
-            container.querySelectorAll('[data-spotify-start]').forEach(el => {
-              const start = Number(el.dataset.spotifyStart) || 0;
-              const end = Number(el.dataset.spotifyEnd) || 0;
-              if (!start || !end || end <= start) return;
-              const totalSec = Math.max(1, Math.floor((end - start) / 1000));
-              const curSec = Math.max(0, Math.min(totalSec, Math.floor((now - start) / 1000)));
-              const pct = Math.min(100, Math.max(0, (curSec / totalSec) * 100));
-              const curM = Math.floor(curSec / 60);
-              const curS = curSec % 60;
-              const totM = Math.floor(totalSec / 60);
-              const totS = totalSec % 60;
-
-              const curEl = el.querySelector('.spotify-cur');
-              const totEl = el.querySelector('.spotify-tot');
-              const barEl = el.querySelector('.spotify-bar');
-
-              if (curEl) curEl.textContent = `${String(curM).padStart(2, '0')}:${String(curS).padStart(2, '0')}`;
-              if (totEl) totEl.textContent = `${String(totM).padStart(2, '0')}:${String(totS).padStart(2, '0')}`;
-              if (barEl) barEl.style.width = `${pct.toFixed(1)}%`;
-            });
-
-            // Elapsed game/app timers
-            container.querySelectorAll('[data-elapsed-start]').forEach(el => {
-              const start = Number(el.dataset.elapsedStart) || now;
-              const elapsedSec = Math.max(0, Math.floor((now - start) / 1000));
-              const mins = Math.floor(elapsedSec / 60);
-              const secs = elapsedSec % 60;
-              const hrs = Math.floor(mins / 60);
-              const m = mins % 60;
-              const timeStr = hrs > 0
-                ? `${hrs}:${String(m).padStart(2, '0')}:${String(secs).padStart(2, '0')}`
-                : `${mins}:${String(secs).padStart(2, '0')}`;
-              const valEl = el.querySelector('.elapsed-val');
-              if (valEl) valEl.textContent = timeStr;
-            });
-          }
-
-          tickTimers();
-          activityLiveTimer = setInterval(tickTimers, 1000);
         }
 
-        /* -------------------------------------------------------------
-         * 7. VIDEO AUDIO GESTURE UNMUTER
-         * ----------------------------------------------------------- */
-        let hasInteracted = false;
-        function handleFirstGesture() {
-          if (hasInteracted) return;
-          hasInteracted = true;
-          const video = document.getElementById('bg-video');
-          if (video && !isVideoMuted) {
-            video.muted = false;
-            video.volume = currentVolume;
-            video.play().catch(() => {});
-          }
-        }
-        window.addEventListener('click', handleFirstGesture, { passive: true });
-        window.addEventListener('touchstart', handleFirstGesture, { passive: true });
-        window.addEventListener('keydown', handleFirstGesture, { passive: true });
+        container.innerHTML = activeCardsHtml.join('');
 
-        /* -------------------------------------------------------------
-         * 8. CONNECTED PROFILES & FLOATING CLICK ACTIONS
-         * ----------------------------------------------------------- */
-        function triggerTileFloating(tile) {
-          if (!tile) return;
+        // 6E. Master Timer Interval for Live Updates
+        function tickTimers() {
+          const now = Date.now();
+          // Spotify progress bars
+          container.querySelectorAll('[data-spotify-start]').forEach(el => {
+            const start = Number(el.dataset.spotifyStart) || 0;
+            const end = Number(el.dataset.spotifyEnd) || 0;
+            if (!start || !end || end <= start) return;
+            const totalSec = Math.max(1, Math.floor((end - start) / 1000));
+            const curSec = Math.max(0, Math.min(totalSec, Math.floor((now - start) / 1000)));
+            const pct = Math.min(100, Math.max(0, (curSec / totalSec) * 100));
+            const curM = Math.floor(curSec / 60);
+            const curS = curSec % 60;
+            const totM = Math.floor(totalSec / 60);
+            const totS = totalSec % 60;
+
+            const curEl = el.querySelector('.spotify-cur');
+            const totEl = el.querySelector('.spotify-tot');
+            const barEl = el.querySelector('.spotify-bar');
+
+            if (curEl) curEl.textContent = `${String(curM).padStart(2, '0')}:${String(curS).padStart(2, '0')}`;
+            if (totEl) totEl.textContent = `${String(totM).padStart(2, '0')}:${String(totS).padStart(2, '0')}`;
+            if (barEl) barEl.style.width = `${pct.toFixed(1)}%`;
+          });
+
+          // Elapsed game/app timers
+          container.querySelectorAll('[data-elapsed-start]').forEach(el => {
+            const start = Number(el.dataset.elapsedStart) || now;
+            const elapsedSec = Math.max(0, Math.floor((now - start) / 1000));
+            const mins = Math.floor(elapsedSec / 60);
+            const secs = elapsedSec % 60;
+            const hrs = Math.floor(mins / 60);
+            const m = mins % 60;
+            const timeStr = hrs > 0
+              ? `${hrs}:${String(m).padStart(2, '0')}:${String(secs).padStart(2, '0')}`
+              : `${mins}:${String(secs).padStart(2, '0')}`;
+            const valEl = el.querySelector('.elapsed-val');
+            if (valEl) valEl.textContent = timeStr;
+          });
+        }
+
+        tickTimers();
+        activityLiveTimer = setInterval(tickTimers, 1000);
+      }
+
+      /* -------------------------------------------------------------
+       * 7. VIDEO AUDIO GESTURE UNMUTER
+       * ----------------------------------------------------------- */
+      let hasInteracted = false;
+      function handleFirstGesture() {
+        if (hasInteracted) return;
+        hasInteracted = true;
+        const video = document.getElementById('bg-video');
+        if (video && !isVideoMuted) {
+          video.muted = false;
+          video.volume = currentVolume;
+          video.play().catch(() => { });
+        }
+      }
+      window.addEventListener('click', handleFirstGesture, { passive: true });
+      window.addEventListener('touchstart', handleFirstGesture, { passive: true });
+      window.addEventListener('keydown', handleFirstGesture, { passive: true });
+
+      /* -------------------------------------------------------------
+       * 8. CONNECTED PROFILES & FLOATING CLICK ACTIONS
+       * ----------------------------------------------------------- */
+      function triggerTileFloating(tile) {
+        if (!tile) return;
+        tile.classList.remove('is-floating-clicked');
+        void tile.offsetWidth; // Force reflow
+        tile.classList.add('is-floating-clicked');
+        setTimeout(() => {
           tile.classList.remove('is-floating-clicked');
-          void tile.offsetWidth; // Force reflow
-          tile.classList.add('is-floating-clicked');
-          setTimeout(() => {
-            tile.classList.remove('is-floating-clicked');
-          }, 800);
+        }, 800);
+      }
+
+      function copyIdWithFeedback(badgeId, textToCopy, label) {
+        function finish() {
+          showToast(`Copied ${label}: ${textToCopy}! ⚡`);
+          const badge = document.getElementById(badgeId);
+          if (badge) {
+            const prevText = badge.textContent;
+            badge.textContent = 'COPIED!';
+            badge.classList.remove('text-zinc-300', 'bg-[#15141f]', 'border-white/10');
+            badge.classList.add('bg-emerald-500/30', 'text-emerald-300', 'border-emerald-500/50');
+            setTimeout(() => {
+              badge.textContent = prevText;
+              badge.classList.remove('bg-emerald-500/30', 'text-emerald-300', 'border-emerald-500/50');
+              badge.classList.add('text-zinc-300', 'bg-[#15141f]', 'border-white/10');
+            }, 1600);
+          }
         }
 
-        function copyIdWithFeedback(badgeId, textToCopy, label) {
-          function finish() {
-            showToast(`Copied ${label}: ${textToCopy}! ⚡`);
-            const badge = document.getElementById(badgeId);
-            if (badge) {
-              const prevText = badge.textContent;
-              badge.textContent = 'COPIED!';
-              badge.classList.remove('text-zinc-300', 'bg-[#15141f]', 'border-white/10');
-              badge.classList.add('bg-emerald-500/30', 'text-emerald-300', 'border-emerald-500/50');
-              setTimeout(() => {
-                badge.textContent = prevText;
-                badge.classList.remove('bg-emerald-500/30', 'text-emerald-300', 'border-emerald-500/50');
-                badge.classList.add('text-zinc-300', 'bg-[#15141f]', 'border-white/10');
-              }, 1600);
-            }
-          }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(textToCopy).then(finish).catch(() => {
+            fallbackCopy(textToCopy, finish, label);
+          });
+        } else {
+          fallbackCopy(textToCopy, finish, label);
+        }
+      }
 
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(textToCopy).then(finish).catch(() => {
-              fallbackCopy(textToCopy, finish, label);
+      function fallbackCopy(text, callback, label) {
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          callback();
+        } catch (_) {
+          showToast(`${label}: ${text}`);
+        }
+      }
+
+      // 1. Discord copy button
+      const btnDiscord = document.getElementById('btn-social-discord');
+      if (btnDiscord) {
+        btnDiscord.addEventListener('click', (e) => {
+          e.stopPropagation();
+          triggerTileFloating(btnDiscord);
+          const tag = config.discordTag || (config.socials && config.socials.discord) || 'nika.nx8';
+          copyIdWithFeedback('badge-discord', tag, 'Discord ID');
+        });
+      }
+
+      // 2. Valorant copy ID
+      const btnValorant = document.getElementById('btn-social-valorant');
+      if (btnValorant) {
+        btnValorant.addEventListener('click', (e) => {
+          e.stopPropagation();
+          triggerTileFloating(btnValorant);
+          const valId = (config.socials && config.socials.valorant) || 'SunGodNikaカ#Edits';
+          copyIdWithFeedback('badge-valorant', valId, 'Valorant ID');
+        });
+      }
+
+      // Helper to reliably redirect/open social hyperlinks on click
+      function bindExternalSocialLink(id, configKey, fallbackUrl, label) {
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        const getTargetUrl = () => (config.socials && config.socials[configKey]) || el.getAttribute('href') || fallbackUrl;
+
+        const targetUrl = getTargetUrl();
+        if (targetUrl) {
+          el.href = targetUrl;
+        }
+
+        el.addEventListener('click', (e) => {
+          e.stopPropagation();
+          triggerTileFloating(el);
+          showToast(`Opening ${label}... ↗`);
+
+          const url = getTargetUrl();
+          if (!url) return;
+
+          // Direct guaranteed navigation
+          try {
+            const win = window.open(url, '_blank', 'noopener,noreferrer');
+            if (win) {
+              e.preventDefault();
+            }
+          } catch (_) {
+            // Allow native anchor navigation
+          }
+        });
+      }
+
+      // 3. YouTube hyperlink
+      bindExternalSocialLink('link-youtube', 'youtube', 'https://www.youtube.com/@nika.nx8', 'YouTube @nika.nx8');
+
+      // 4. Instagram hyperlink
+      bindExternalSocialLink('link-instagram', 'instagram', 'https://www.instagram.com/nika.nx8/', 'Instagram @nika.nx8');
+
+      // 5. Steam hyperlink
+      bindExternalSocialLink('link-steam', 'steam', 'https://steamcommunity.com/profiles/76561199098245906/', 'Steam Profile');
+
+      // 6. Spotify hyperlink
+      bindExternalSocialLink('link-spotify', 'spotify', 'https://open.spotify.com/user/31bebpyewmgvxcovamvpsrudzaoi?si=9eb05cb78a1c43be', 'Spotify Profile');
+
+      // UID copy button
+      const btnUid = document.getElementById('btn-copy-uid');
+      if (btnUid) {
+        btnUid.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const textToCopy = '#0001';
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(textToCopy).then(() => {
+              showToast('Copied UID #0001 to clipboard!');
             });
           } else {
-            fallbackCopy(textToCopy, finish, label);
+            showToast('Copied UID #0001');
           }
-        }
+        });
+      }
 
-        function fallbackCopy(text, callback, label) {
-          try {
-            const ta = document.createElement('textarea');
-            ta.value = text;
-            ta.style.position = 'fixed';
-            ta.style.left = '-9999px';
-            document.body.appendChild(ta);
-            ta.focus();
-            ta.select();
-            document.execCommand('copy');
-            document.body.removeChild(ta);
-            callback();
-          } catch (_) {
-            showToast(`${label}: ${text}`);
-          }
-        }
+      /* -------------------------------------------------------------
+       * 9. 3D PARALLAX TILT & FLIP CONTROLS
+       * ----------------------------------------------------------- */
+      const flipScene = document.querySelector('.flip-scene');
+      const tiltWrapper = document.getElementById('tilt-wrapper');
+      const cardFront = document.getElementById('card-front-face');
+      const btnFlipBack = document.getElementById('btn-flip-back');
 
-        // 1. Discord copy button
-        const btnDiscord = document.getElementById('btn-social-discord');
-        if (btnDiscord) {
-          btnDiscord.addEventListener('click', (e) => {
+      function flipToProfile() {
+        if (flipScene && !flipScene.classList.contains('is-flipped')) {
+          flipScene.classList.add('is-flipped');
+        }
+      }
+
+      function flipToPoster() {
+        if (flipScene) {
+          flipScene.classList.remove('is-flipped');
+        }
+      }
+
+      if (flipScene && tiltWrapper) {
+        // Dynamic 3D tilt tracking mouse (without local perspective to preserve child 3D context)
+        flipScene.addEventListener('mousemove', (e) => {
+          if (window.matchMedia && !window.matchMedia('(hover: hover)').matches) return;
+          const rect = flipScene.getBoundingClientRect();
+          const cardX = e.clientX - rect.left;
+          const cardY = e.clientY - rect.top;
+
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((cardY - centerY) / centerY) * -6;
+          const rotateY = ((cardX - centerX) / centerX) * 6;
+
+          tiltWrapper.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+        });
+
+        // When taking cursor off the card, reset 3D tilt (card STAYS flipped!)
+        flipScene.addEventListener('mouseleave', () => {
+          tiltWrapper.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+
+        // Click on front face directly flips to profile
+        if (cardFront) {
+          cardFront.addEventListener('click', (e) => {
             e.stopPropagation();
-            triggerTileFloating(btnDiscord);
-            const tag = config.discordTag || (config.socials && config.socials.discord) || 'nika.nx8';
-            copyIdWithFeedback('badge-discord', tag, 'Discord ID');
+            flipToProfile();
           });
         }
 
-        // 2. Valorant copy ID
-        const btnValorant = document.getElementById('btn-social-valorant');
-        if (btnValorant) {
-          btnValorant.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerTileFloating(btnValorant);
-            const valId = (config.socials && config.socials.valorant) || 'SunGodNikaカ#Edits';
-            copyIdWithFeedback('badge-valorant', valId, 'Valorant ID');
-          });
-        }
-
-        // Helper to reliably redirect/open social hyperlinks on click
-        function bindExternalSocialLink(id, configKey, fallbackUrl, label) {
-          const el = document.getElementById(id);
-          if (!el) return;
-
-          const getTargetUrl = () => (config.socials && config.socials[configKey]) || el.getAttribute('href') || fallbackUrl;
-
-          const targetUrl = getTargetUrl();
-          if (targetUrl) {
-            el.href = targetUrl;
-          }
-
-          el.addEventListener('click', (e) => {
-            e.stopPropagation();
-            triggerTileFloating(el);
-            showToast(`Opening ${label}... ↗`);
-
-            const url = getTargetUrl();
-            if (!url) return;
-
-            // Direct guaranteed navigation
-            try {
-              const win = window.open(url, '_blank', 'noopener,noreferrer');
-              if (win) {
-                e.preventDefault();
-              }
-            } catch (_) {
-              // Allow native anchor navigation
-            }
-          });
-        }
-
-        // 3. YouTube hyperlink
-        bindExternalSocialLink('link-youtube', 'youtube', 'https://www.youtube.com/@nika.nx8', 'YouTube @nika.nx8');
-
-        // 4. Instagram hyperlink
-        bindExternalSocialLink('link-instagram', 'instagram', 'https://www.instagram.com/nika.nx8/', 'Instagram @nika.nx8');
-
-        // 5. Steam hyperlink
-        bindExternalSocialLink('link-steam', 'steam', 'https://steamcommunity.com/profiles/76561199098245906/', 'Steam Profile');
-
-        // 6. Spotify hyperlink
-        bindExternalSocialLink('link-spotify', 'spotify', 'https://open.spotify.com/user/31bebpyewmgvxcovamvpsrudzaoi?si=9eb05cb78a1c43be', 'Spotify Profile');
-
-        // UID copy button
-        const btnUid = document.getElementById('btn-copy-uid');
-        if (btnUid) {
-          btnUid.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const textToCopy = '#0001';
-            if (navigator.clipboard) {
-              navigator.clipboard.writeText(textToCopy).then(() => {
-                showToast('Copied UID #0001 to clipboard!');
-              });
-            } else {
-              showToast('Copied UID #0001');
-            }
-          });
-        }
-
-        /* -------------------------------------------------------------
-         * 9. 3D PARALLAX TILT & FLIP CONTROLS
-         * ----------------------------------------------------------- */
-        const flipScene = document.querySelector('.flip-scene');
-        const tiltWrapper = document.getElementById('tilt-wrapper');
-        const cardFront = document.getElementById('card-front-face');
-        const btnFlipBack = document.getElementById('btn-flip-back');
-
-        function flipToProfile() {
-          if (flipScene && !flipScene.classList.contains('is-flipped')) {
-            flipScene.classList.add('is-flipped');
-          }
-        }
-
-        function flipToPoster() {
-          if (flipScene) {
-            flipScene.classList.remove('is-flipped');
-          }
-        }
-
-        if (flipScene && tiltWrapper) {
-          // Dynamic 3D tilt tracking mouse (without local perspective to preserve child 3D context)
-          flipScene.addEventListener('mousemove', (e) => {
-            const rect = flipScene.getBoundingClientRect();
-            const cardX = e.clientX - rect.left;
-            const cardY = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = ((cardY - centerY) / centerY) * -6;
-            const rotateY = ((cardX - centerX) / centerX) * 6;
-
-            tiltWrapper.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
-          });
-
-          // When taking cursor off the card, reset 3D tilt (card STAYS flipped!)
-          flipScene.addEventListener('mouseleave', () => {
-            tiltWrapper.style.transform = 'rotateX(0deg) rotateY(0deg)';
-          });
-
-          // Click on front face directly flips to profile
-          if (cardFront) {
-            cardFront.addEventListener('click', (e) => {
-              e.stopPropagation();
-              flipToProfile();
-            });
-          }
-
-          // Click anywhere on flipScene when not flipped triggers flip to profile
-          flipScene.addEventListener('click', (e) => {
-            if (!flipScene.classList.contains('is-flipped')) {
-              flipToProfile();
-            }
-          });
-
-          // Click flip back button to return to front poster
-          if (btnFlipBack) {
-            btnFlipBack.addEventListener('click', (e) => {
-              e.stopPropagation();
-              e.preventDefault();
-              flipToPoster();
-            });
-          }
-        }
-
-        /* -------------------------------------------------------------
-         * 10. KEYBOARD SHORTCUTS
-         * ----------------------------------------------------------- */
-        window.addEventListener('keydown', (e) => {
-          if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-
-          if (e.code === 'Space') {
-            e.preventDefault();
-            const video = document.getElementById('bg-video');
-            if (video) {
-              if (video.paused) {
-                video.play();
-                showToast('Video playing');
-              } else {
-                video.pause();
-                showToast('Video paused');
-              }
-            }
-          } else if (e.key === 'm' || e.key === 'M') {
-            const quickMute = document.getElementById('btn-quick-mute');
-            if (quickMute) quickMute.click();
+        // Click anywhere on flipScene when not flipped triggers flip to profile
+        flipScene.addEventListener('click', (e) => {
+          if (!flipScene.classList.contains('is-flipped')) {
+            flipToProfile();
           }
         });
 
-        /* -------------------------------------------------------------
-         * 11. INITIALIZATION
-         * ----------------------------------------------------------- */
-        applyConfigToDOM();
-        applyVideoAudio();
-        connectLanyard();
-      })();
-    </script>
-  </body>
+        // Click flip back button to return to front poster
+        if (btnFlipBack) {
+          btnFlipBack.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            flipToPoster();
+          });
+        }
+      }
+
+      /* -------------------------------------------------------------
+       * 10. KEYBOARD SHORTCUTS
+       * ----------------------------------------------------------- */
+      window.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+        if (e.code === 'Space') {
+          e.preventDefault();
+          const video = document.getElementById('bg-video');
+          if (video) {
+            if (video.paused) {
+              video.play();
+              showToast('Video playing');
+            } else {
+              video.pause();
+              showToast('Video paused');
+            }
+          }
+        } else if (e.key === 'm' || e.key === 'M') {
+          const quickMute = document.getElementById('btn-quick-mute');
+          if (quickMute) quickMute.click();
+        }
+      });
+
+      /* -------------------------------------------------------------
+       * 11. INITIALIZATION
+       * ----------------------------------------------------------- */
+      applyConfigToDOM();
+      applyVideoAudio();
+      connectLanyard();
+    })();
+  </script>
+</body>
+
 </html>
